@@ -64,29 +64,29 @@
 :root {
   --radius: 0.75rem;
   /* Stride brand — Light mode
-     Warm cream #FFF3E8 background, Charcoal #1C1B18 ink,
-     Flint ember #E8731A accent, Stone #F1EFE8 secondary */
-  --background: oklch(0.965 0.024 65);
+     Light orange background, deeper orange surfaces,
+     Charcoal ink, Flint ember accent */
+  --background: oklch(0.93 0.07 55);
   --foreground: oklch(0.18 0.008 60);
-  --card: oklch(0.982 0.014 68);
+  --card: oklch(0.96 0.05 60);
   --card-foreground: oklch(0.18 0.008 60);
-  --popover: oklch(0.982 0.014 68);
+  --popover: oklch(0.96 0.05 60);
   --popover-foreground: oklch(0.18 0.008 60);
   /* Charcoal primary */
   --primary: oklch(0.22 0.008 60);
   --primary-foreground: oklch(0.972 0.022 70);
-  /* Stone secondary */
-  --secondary: oklch(0.945 0.008 80);
+  /* Warm orange secondary */
+  --secondary: oklch(0.88 0.09 55);
   --secondary-foreground: oklch(0.22 0.008 60);
-  --muted: oklch(0.93 0.012 75);
+  --muted: oklch(0.9 0.06 60);
   --muted-foreground: oklch(0.42 0.012 60);
   /* Flint ember accent */
   --accent: oklch(0.665 0.175 47);
   --accent-foreground: oklch(0.985 0.012 70);
   --destructive: oklch(0.6 0.22 27);
   --destructive-foreground: oklch(0.985 0.012 70);
-  --border: oklch(0.86 0.012 70);
-  --input: oklch(0.9 0.012 70);
+  --border: oklch(0.82 0.07 55);
+  --input: oklch(0.86 0.06 55);
   --ring: oklch(0.665 0.175 47);
   /* Glass surfaces */
   --glass-bg: oklch(1 0 0 / 55%);
