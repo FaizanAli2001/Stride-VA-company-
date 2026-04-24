@@ -8,7 +8,8 @@ export function SiteNav() {
   const links = [
     { to: "/", label: "Home" },
     { to: "/services", label: "Services" },
-    { to: "/about", label: "Team", hash: "team" as string | undefined },
+    { to: "/about", label: "About" },
+    { to: "/team", label: "Team", hash: undefined as string | undefined },
     { to: "/contact", label: "Contact" },
   ];
 
