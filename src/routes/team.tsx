@@ -7,17 +7,17 @@ import malikImg from "@/assets/team-malik.jpg";
 import kulsoomImg from "@/assets/team-kulsoom.png";
 import faizanImg from "@/assets/team-faizan.png";
 
-export const Route = createFileRoute("/about")({
-  component: AboutPage,
+export const Route = createFileRoute("/team")({
+  component: TeamPage,
   head: () => ({
     meta: [
-      { title: "About — Stride" },
+      { title: "Team — Stride" },
       {
         name: "description",
         content:
-          "A stride is what full momentum feels like. We built Stride to give brilliant businesses a clear run, every single day.",
+          "Meet the four founders behind Stride. A small, founder-led firm working directly with you.",
       },
-      { property: "og:title", content: "About — Stride" },
+      { property: "og:title", content: "Team — Stride" },
       { property: "og:description", content: "Four founders. One mission: full momentum." },
     ],
   }),
@@ -66,7 +66,7 @@ const team = [
   },
 ];
 
-function AboutPage() {
+function TeamPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteNav />
