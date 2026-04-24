@@ -32,9 +32,9 @@ function ContactPage() {
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           <a
             href="mailto:info@stride.con"
-            className="group flex items-start gap-4 rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-0.5 hover:shadow-md"
+            className="glass group flex items-start gap-4 rounded-2xl p-6 transition-all hover:-translate-y-0.5"
           >
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/15 text-accent">
               <Mail className="h-5 w-5" />
             </div>
             <div>
@@ -46,8 +46,8 @@ function ContactPage() {
               </p>
             </div>
           </a>
-          <div className="flex items-start gap-4 rounded-2xl border border-border bg-card p-6">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+          <div className="glass flex items-start gap-4 rounded-2xl p-6">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/15 text-accent">
               <Clock className="h-5 w-5" />
             </div>
             <div>
