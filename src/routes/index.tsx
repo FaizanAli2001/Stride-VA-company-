@@ -21,13 +21,9 @@ function Index() {
       <SiteNav />
 
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute -top-40 right-0 h-[500px] w-[500px] rounded-full bg-accent/20 blur-3xl" />
-          <div className="absolute top-40 -left-20 h-[400px] w-[400px] rounded-full bg-primary/10 blur-3xl" />
-        </div>
+      <section className="relative">
         <div className="mx-auto max-w-6xl px-6 pt-20 pb-24 md:pt-28 md:pb-32">
-          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur">
+          <div className="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium text-muted-foreground">
             <Sparkles className="h-3.5 w-3.5 text-accent" />
             A new kind of virtual assistant company
           </div>
@@ -43,14 +39,14 @@ function Index() {
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <Link
               to="/services"
-              className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:opacity-90"
+              className="group inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-accent-foreground transition-all hover:opacity-90"
             >
               See what we do
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
             <a
               href="mailto:info@stride.con"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+              className="glass inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-card"
             >
               info@stride.con
             </a>
@@ -59,7 +55,7 @@ function Index() {
       </section>
 
       {/* Who we help */}
-      <section className="border-y border-border/60 bg-secondary/30">
+      <section className="border-y border-border/40">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <p className="text-center text-xs font-medium uppercase tracking-widest text-muted-foreground">
             Built for the businesses that hate admin
@@ -68,7 +64,7 @@ function Index() {
             {["Healthcare", "Law Firms", "Real Estate", "Marketing", "Coaches"].map((n) => (
               <div
                 key={n}
-                className="rounded-xl border border-border/60 bg-card/60 px-4 py-5 font-display text-lg"
+                className="glass rounded-xl px-4 py-5 font-display text-lg"
               >
                 {n}
               </div>
@@ -102,9 +98,9 @@ function Index() {
           ].map((s) => (
             <div
               key={s.title}
-              className="group rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:shadow-lg"
+              className="glass group rounded-2xl p-6 transition-all hover:-translate-y-1"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/15 text-accent">
                 <s.icon className="h-5 w-5" />
               </div>
               <h3 className="mt-4 font-display text-xl font-semibold">{s.title}</h3>
@@ -117,7 +113,7 @@ function Index() {
       {/* CTA */}
       <section className="mx-auto max-w-6xl px-6 pb-24">
         <div className="relative overflow-hidden rounded-3xl bg-primary px-8 py-16 text-primary-foreground md:px-16">
-          <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-accent/30 blur-3xl" />
+          <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-accent/40 blur-3xl" />
           <div className="relative max-w-2xl">
             <Briefcase className="h-8 w-8 text-accent" />
             <h2 className="mt-4 font-display text-4xl font-semibold tracking-tight md:text-5xl">

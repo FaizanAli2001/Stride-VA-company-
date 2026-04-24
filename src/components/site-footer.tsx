@@ -2,11 +2,11 @@ import { Link } from "@tanstack/react-router";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border/60 bg-secondary/40">
+    <footer className="border-t border-border/40 bg-background/40 backdrop-blur-xl">
       <div className="mx-auto grid max-w-6xl gap-8 px-6 py-12 md:grid-cols-3">
         <div>
           <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground font-display text-lg font-semibold">
+            <div className="flex h-8 w-8 items-center justify-center rounded-md bg-accent text-accent-foreground font-display text-lg font-semibold">
               S
             </div>
             <span className="font-display text-xl font-semibold">Stride</span>

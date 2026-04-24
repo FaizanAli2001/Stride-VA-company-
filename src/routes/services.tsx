@@ -45,9 +45,9 @@ function ServicesPage() {
           {services.map((s) => (
             <div
               key={s.title}
-              className="flex gap-5 rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-0.5 hover:shadow-md"
+              className="glass flex gap-5 rounded-2xl p-6 transition-all hover:-translate-y-0.5"
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent/15 text-accent">
                 <s.icon className="h-5 w-5" />
               </div>
               <div>
@@ -58,7 +58,7 @@ function ServicesPage() {
           ))}
         </div>
 
-        <div className="mt-16 rounded-3xl border border-border bg-secondary/40 p-10 text-center">
+        <div className="glass mt-16 rounded-3xl p-10 text-center">
           <h2 className="font-display text-3xl font-semibold tracking-tight md:text-4xl">
             Don't see what you need?
           </h2>
@@ -67,7 +67,7 @@ function ServicesPage() {
           </p>
           <a
             href="mailto:info@stride.con"
-            className="mt-6 inline-flex rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90"
+            className="mt-6 inline-flex rounded-full bg-accent px-6 py-3 text-sm font-medium text-accent-foreground hover:opacity-90"
           >
             info@stride.con
           </a>

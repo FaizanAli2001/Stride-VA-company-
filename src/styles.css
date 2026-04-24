@@ -63,28 +63,35 @@
 
 :root {
   --radius: 0.75rem;
-  /* Warm cream background, deep ink foreground */
-  --background: oklch(0.985 0.01 85);
-  --foreground: oklch(0.18 0.02 250);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.02 250);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.02 250);
-  /* Deep navy primary */
-  --primary: oklch(0.22 0.05 255);
-  --primary-foreground: oklch(0.985 0.01 85);
-  --secondary: oklch(0.95 0.015 85);
-  --secondary-foreground: oklch(0.22 0.05 255);
-  --muted: oklch(0.94 0.012 85);
-  --muted-foreground: oklch(0.45 0.02 250);
-  /* Warm coral accent */
-  --accent: oklch(0.72 0.16 45);
-  --accent-foreground: oklch(0.18 0.02 250);
+  /* Stride brand — Light mode
+     Warm cream #FFF3E8 background, Charcoal #1C1B18 ink,
+     Flint ember #E8731A accent, Stone #F1EFE8 secondary */
+  --background: oklch(0.972 0.022 70);
+  --foreground: oklch(0.18 0.008 60);
+  --card: oklch(0.985 0.012 70);
+  --card-foreground: oklch(0.18 0.008 60);
+  --popover: oklch(0.985 0.012 70);
+  --popover-foreground: oklch(0.18 0.008 60);
+  /* Charcoal primary */
+  --primary: oklch(0.22 0.008 60);
+  --primary-foreground: oklch(0.972 0.022 70);
+  /* Stone secondary */
+  --secondary: oklch(0.945 0.008 80);
+  --secondary-foreground: oklch(0.22 0.008 60);
+  --muted: oklch(0.93 0.012 75);
+  --muted-foreground: oklch(0.42 0.012 60);
+  /* Flint ember accent */
+  --accent: oklch(0.665 0.175 47);
+  --accent-foreground: oklch(0.985 0.012 70);
   --destructive: oklch(0.6 0.22 27);
-  --destructive-foreground: oklch(0.985 0.01 85);
-  --border: oklch(0.88 0.015 85);
-  --input: oklch(0.9 0.015 85);
-  --ring: oklch(0.72 0.16 45);
+  --destructive-foreground: oklch(0.985 0.012 70);
+  --border: oklch(0.86 0.012 70);
+  --input: oklch(0.9 0.012 70);
+  --ring: oklch(0.665 0.175 47);
+  /* Glass surfaces */
+  --glass-bg: oklch(1 0 0 / 55%);
+  --glass-border: oklch(1 0 0 / 60%);
+  --glass-shadow: 0 8px 32px oklch(0.18 0.008 60 / 8%);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -119,25 +126,29 @@
 }
 
 .dark {
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
-  --card: oklch(0.208 0.042 265.755);
-  --card-foreground: oklch(0.984 0.003 247.858);
-  --popover: oklch(0.208 0.042 265.755);
-  --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
-  --secondary: oklch(0.279 0.041 260.031);
-  --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: oklch(0.279 0.041 260.031);
-  --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.279 0.041 260.031);
-  --accent-foreground: oklch(0.984 0.003 247.858);
+  /* Stride brand — Dark mode (Charcoal-led) */
+  --background: oklch(0.18 0.008 60);
+  --foreground: oklch(0.972 0.022 70);
+  --card: oklch(0.225 0.008 60);
+  --card-foreground: oklch(0.972 0.022 70);
+  --popover: oklch(0.225 0.008 60);
+  --popover-foreground: oklch(0.972 0.022 70);
+  --primary: oklch(0.972 0.022 70);
+  --primary-foreground: oklch(0.18 0.008 60);
+  --secondary: oklch(0.27 0.01 60);
+  --secondary-foreground: oklch(0.972 0.022 70);
+  --muted: oklch(0.27 0.01 60);
+  --muted-foreground: oklch(0.72 0.012 70);
+  --accent: oklch(0.7 0.18 47);
+  --accent-foreground: oklch(0.18 0.008 60);
   --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --destructive-foreground: oklch(0.972 0.022 70);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.551 0.027 264.364);
+  --ring: oklch(0.7 0.18 47);
+  --glass-bg: oklch(0.225 0.008 60 / 55%);
+  --glass-border: oklch(1 0 0 / 12%);
+  --glass-shadow: 0 8px 32px oklch(0 0 0 / 40%);
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
@@ -162,4 +173,20 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
   }
+}
+
+@utility glass {
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+@utility glass-strong {
+  background-color: color-mix(in oklab, var(--glass-bg) 80%, var(--background));
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
 }
