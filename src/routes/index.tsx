@@ -47,7 +47,7 @@ const marquee = [
 
 function Index() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[oklch(0.78_0.16_55)] via-[oklch(0.88_0.11_60)] to-[oklch(0.95_0.05_65)] text-foreground">
+    <div className="min-h-screen text-foreground" style={{ background: "var(--gradient-page)" }}>
       <SiteNav />
 
       {/* Hero */}
@@ -293,7 +293,7 @@ function Index() {
               href="mailto:info@stride.con"
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-accent-foreground hover:opacity-90"
             >
-              Email info@stride.con
+              <span>Email info@stride.con</span>
               <ArrowRight className="h-4 w-4" />
             </a>
           </div>
