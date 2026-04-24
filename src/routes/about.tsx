@@ -71,28 +71,19 @@ function AboutPage() {
     <div className="min-h-screen bg-background text-foreground">
       <SiteNav />
 
-      <section className="mx-auto max-w-4xl px-6 pt-20 pb-16 text-center md:pt-28">
-        <p className="inline-flex rounded-full bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent">
-          About
-        </p>
-        <h1 className="mt-5 font-display text-5xl font-bold tracking-tight md:text-6xl">
-          Four friends. One mission.
-        </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-          We're a small, founder-led firm. When you work with Stride, you work directly with us —
-          not a faceless account manager.
-        </p>
-      </section>
-
       {/* Team */}
-      <section id="team" className="mx-auto max-w-6xl px-6 pb-24 scroll-mt-24">
+      <section id="team" className="mx-auto max-w-6xl px-6 pt-20 pb-24 scroll-mt-24 md:pt-28">
         <div className="mb-12 text-center">
           <p className="inline-flex rounded-full bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent">
             The team
           </p>
-          <h2 className="mt-5 font-display text-4xl font-bold tracking-tight md:text-5xl">
-            Four founders. One mission.
-          </h2>
+          <h1 className="mt-5 font-display text-5xl font-bold tracking-tight md:text-6xl">
+            Four friends. <span className="text-accent">One mission.</span>
+          </h1>
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
+            We're a small, founder-led firm. When you work with Stride, you work directly with us
+            — not a faceless account manager.
+          </p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {team.map((m) => (
