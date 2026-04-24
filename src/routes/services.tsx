@@ -68,7 +68,7 @@ const services = [
 
 function ServicesPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen text-foreground" style={{ background: "var(--gradient-page)" }}>
       <SiteNav />
       <section className="mx-auto max-w-5xl px-6 pt-20 pb-12 text-center md:pt-28">
         <p className="inline-flex rounded-full bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent">
