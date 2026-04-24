@@ -5,14 +5,16 @@ export function SiteFooter() {
     <footer className="border-t border-border/40 bg-background/40 backdrop-blur-xl">
       <div className="mx-auto grid max-w-6xl gap-8 px-6 py-12 md:grid-cols-3">
         <div>
-          <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-md bg-accent text-accent-foreground font-display text-lg font-semibold">
-              S
-            </div>
-            <span className="font-display text-xl font-semibold">Stride</span>
+          <div className="flex flex-col leading-none">
+            <span className="font-display text-2xl font-bold tracking-tight">
+              STR<span className="text-accent">/</span>IDE
+            </span>
+            <span className="mt-0.5 text-[10px] font-medium uppercase tracking-[0.25em] text-muted-foreground">
+              Virtual Assistant
+            </span>
           </div>
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">
-            Virtual assistants helping founders, agencies, and small teams reclaim their week.
+            Boutique virtual assistant support helping busy professionals keep their momentum.
           </p>
         </div>
         <div>
