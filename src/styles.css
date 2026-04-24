@@ -66,11 +66,11 @@
   /* Stride brand — Light mode
      Warm cream #FFF3E8 background, Charcoal #1C1B18 ink,
      Flint ember #E8731A accent, Stone #F1EFE8 secondary */
-  --background: oklch(0.972 0.022 70);
+  --background: oklch(0.965 0.024 65);
   --foreground: oklch(0.18 0.008 60);
-  --card: oklch(0.985 0.012 70);
+  --card: oklch(0.982 0.014 68);
   --card-foreground: oklch(0.18 0.008 60);
-  --popover: oklch(0.985 0.012 70);
+  --popover: oklch(0.982 0.014 68);
   --popover-foreground: oklch(0.18 0.008 60);
   /* Charcoal primary */
   --primary: oklch(0.22 0.008 60);
