@@ -68,7 +68,7 @@ const team = [
 
 function TeamPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen text-foreground" style={{ background: "var(--gradient-page)" }}>
       <SiteNav />
 
       {/* Team */}

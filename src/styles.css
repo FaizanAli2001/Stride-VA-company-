@@ -92,6 +92,13 @@
   --glass-bg: oklch(1 0 0 / 55%);
   --glass-border: oklch(1 0 0 / 60%);
   --glass-shadow: 0 8px 32px oklch(0.18 0.008 60 / 8%);
+  /* Page-wide warm orange gradient (light) */
+  --gradient-page: linear-gradient(
+    to bottom,
+    oklch(0.78 0.16 55),
+    oklch(0.88 0.11 60) 40%,
+    oklch(0.95 0.05 65)
+  );
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -149,6 +156,13 @@
   --glass-bg: oklch(0.22 0.012 55 / 60%);
   --glass-border: oklch(1 0 0 / 12%);
   --glass-shadow: 0 8px 32px oklch(0 0 0 / 40%);
+  /* Page-wide deep dark gradient (night) */
+  --gradient-page: linear-gradient(
+    to bottom,
+    oklch(0.14 0.012 55),
+    oklch(0.18 0.012 55) 40%,
+    oklch(0.22 0.012 55)
+  );
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
