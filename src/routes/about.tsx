@@ -45,7 +45,7 @@ const team = [
     ],
   },
   {
-    name: "Kulsoom Waheed",
+    name: "Kulsoom Waheed Psychologist",
     role: "CMO",
     img: kulsoomImg,
     points: [
