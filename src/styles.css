@@ -63,41 +63,41 @@
 
 :root {
   --radius: 0.75rem;
-  /* Stride brand — Light mode
-     Light orange background, deeper orange surfaces,
-     Charcoal ink, Flint ember accent */
-  --background: oklch(0.93 0.07 55);
-  --foreground: oklch(0.18 0.008 60);
-  --card: oklch(0.96 0.05 60);
-  --card-foreground: oklch(0.18 0.008 60);
-  --popover: oklch(0.96 0.05 60);
-  --popover-foreground: oklch(0.18 0.008 60);
-  /* Charcoal primary */
-  --primary: oklch(0.22 0.008 60);
-  --primary-foreground: oklch(0.972 0.022 70);
-  /* Warm orange secondary */
-  --secondary: oklch(0.88 0.09 55);
-  --secondary-foreground: oklch(0.22 0.008 60);
-  --muted: oklch(0.9 0.06 60);
-  --muted-foreground: oklch(0.42 0.012 60);
-  /* Flint ember accent */
-  --accent: oklch(0.665 0.175 47);
-  --accent-foreground: oklch(0.985 0.012 70);
+  /* Stride brand — Midnight Indigo (Light mode)
+     Crisp off-white background, deep navy ink,
+     Electric indigo accent #4f46e5 */
+  --background: oklch(0.985 0.004 270);
+  --foreground: oklch(0.18 0.04 275);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.04 275);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.04 275);
+  /* Deep navy primary (#141432) */
+  --primary: oklch(0.22 0.07 275);
+  --primary-foreground: oklch(0.985 0.004 270);
+  /* Soft indigo-tinted secondary */
+  --secondary: oklch(0.95 0.018 270);
+  --secondary-foreground: oklch(0.22 0.07 275);
+  --muted: oklch(0.955 0.012 270);
+  --muted-foreground: oklch(0.45 0.03 275);
+  /* Electric indigo accent (#4f46e5) */
+  --accent: oklch(0.55 0.22 275);
+  --accent-foreground: oklch(0.985 0.004 270);
   --destructive: oklch(0.6 0.22 27);
-  --destructive-foreground: oklch(0.985 0.012 70);
-  --border: oklch(0.82 0.07 55);
-  --input: oklch(0.86 0.06 55);
-  --ring: oklch(0.665 0.175 47);
+  --destructive-foreground: oklch(0.985 0.004 270);
+  --border: oklch(0.9 0.012 270);
+  --input: oklch(0.92 0.012 270);
+  --ring: oklch(0.55 0.22 275);
   /* Glass surfaces */
-  --glass-bg: oklch(1 0 0 / 55%);
-  --glass-border: oklch(1 0 0 / 60%);
-  --glass-shadow: 0 8px 32px oklch(0.18 0.008 60 / 8%);
-  /* Page-wide warm orange gradient (light) */
+  --glass-bg: oklch(1 0 0 / 65%);
+  --glass-border: oklch(1 0 0 / 70%);
+  --glass-shadow: 0 8px 32px oklch(0.22 0.07 275 / 10%);
+  /* Page-wide subtle indigo gradient (light) */
   --gradient-page: linear-gradient(
     to bottom,
-    oklch(0.78 0.16 55),
-    oklch(0.88 0.11 60) 40%,
-    oklch(0.95 0.05 65)
+    oklch(0.97 0.025 275),
+    oklch(0.985 0.012 270) 40%,
+    oklch(1 0 0)
   );
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
@@ -133,35 +133,37 @@
 }
 
 .dark {
-  /* Stride brand — Dark mode (Charcoal-led) */
-  --background: oklch(0.16 0.012 55);
-  --foreground: oklch(0.972 0.022 70);
-  --card: oklch(0.215 0.012 55);
-  --card-foreground: oklch(0.972 0.022 70);
-  --popover: oklch(0.215 0.012 55);
-  --popover-foreground: oklch(0.972 0.022 70);
-  --primary: oklch(0.972 0.022 70);
-  --primary-foreground: oklch(0.16 0.012 55);
-  --secondary: oklch(0.27 0.01 60);
-  --secondary-foreground: oklch(0.972 0.022 70);
-  --muted: oklch(0.27 0.01 60);
-  --muted-foreground: oklch(0.72 0.012 70);
-  --accent: oklch(0.7 0.18 47);
-  --accent-foreground: oklch(0.16 0.012 55);
+  /* Stride brand — Midnight Indigo (Dark mode)
+     Near-black navy #0a0a1a, deep navy surfaces,
+     Bright indigo accent */
+  --background: oklch(0.12 0.03 275);
+  --foreground: oklch(0.97 0.01 270);
+  --card: oklch(0.18 0.05 275);
+  --card-foreground: oklch(0.97 0.01 270);
+  --popover: oklch(0.18 0.05 275);
+  --popover-foreground: oklch(0.97 0.01 270);
+  --primary: oklch(0.97 0.01 270);
+  --primary-foreground: oklch(0.12 0.03 275);
+  --secondary: oklch(0.24 0.06 275);
+  --secondary-foreground: oklch(0.97 0.01 270);
+  --muted: oklch(0.24 0.06 275);
+  --muted-foreground: oklch(0.72 0.03 275);
+  --accent: oklch(0.65 0.22 275);
+  --accent-foreground: oklch(0.12 0.03 275);
   --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.972 0.022 70);
+  --destructive-foreground: oklch(0.97 0.01 270);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.7 0.18 47);
-  --glass-bg: oklch(0.22 0.012 55 / 60%);
+  --ring: oklch(0.65 0.22 275);
+  --glass-bg: oklch(0.2 0.05 275 / 60%);
   --glass-border: oklch(1 0 0 / 12%);
   --glass-shadow: 0 8px 32px oklch(0 0 0 / 40%);
-  /* Page-wide deep dark gradient (night) */
+  /* Page-wide deep midnight indigo gradient (night) */
   --gradient-page: linear-gradient(
     to bottom,
-    oklch(0.14 0.012 55),
-    oklch(0.18 0.012 55) 40%,
-    oklch(0.22 0.012 55)
+    oklch(0.1 0.04 275),
+    oklch(0.14 0.06 275) 45%,
+    oklch(0.2 0.08 275)
   );
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
