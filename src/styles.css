@@ -127,26 +127,26 @@
 
 .dark {
   /* Stride brand — Dark mode (Charcoal-led) */
-  --background: oklch(0.18 0.008 60);
+  --background: oklch(0.16 0.012 55);
   --foreground: oklch(0.972 0.022 70);
-  --card: oklch(0.225 0.008 60);
+  --card: oklch(0.215 0.012 55);
   --card-foreground: oklch(0.972 0.022 70);
-  --popover: oklch(0.225 0.008 60);
+  --popover: oklch(0.215 0.012 55);
   --popover-foreground: oklch(0.972 0.022 70);
   --primary: oklch(0.972 0.022 70);
-  --primary-foreground: oklch(0.18 0.008 60);
+  --primary-foreground: oklch(0.16 0.012 55);
   --secondary: oklch(0.27 0.01 60);
   --secondary-foreground: oklch(0.972 0.022 70);
   --muted: oklch(0.27 0.01 60);
   --muted-foreground: oklch(0.72 0.012 70);
   --accent: oklch(0.7 0.18 47);
-  --accent-foreground: oklch(0.18 0.008 60);
+  --accent-foreground: oklch(0.16 0.012 55);
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: oklch(0.972 0.022 70);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.7 0.18 47);
-  --glass-bg: oklch(0.225 0.008 60 / 55%);
+  --glass-bg: oklch(0.22 0.012 55 / 60%);
   --glass-border: oklch(1 0 0 / 12%);
   --glass-shadow: 0 8px 32px oklch(0 0 0 / 40%);
   --chart-1: oklch(0.488 0.243 264.376);

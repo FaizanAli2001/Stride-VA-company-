@@ -75,9 +75,9 @@ function RootComponent() {
     <div className="relative min-h-screen overflow-x-hidden">
       {/* Ambient brand glow — fixed across all pages */}
       <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute -top-40 -right-40 h-[600px] w-[600px] rounded-full bg-accent/30 blur-[120px]" />
-        <div className="absolute top-1/3 -left-40 h-[500px] w-[500px] rounded-full bg-accent/20 blur-[120px]" />
-        <div className="absolute bottom-0 right-1/4 h-[400px] w-[400px] rounded-full bg-accent/15 blur-[120px]" />
+        <div className="absolute -top-60 -left-40 h-[700px] w-[700px] rounded-full bg-accent/25 blur-[140px]" />
+        <div className="absolute top-1/2 -right-60 h-[600px] w-[600px] rounded-full bg-accent/15 blur-[140px]" />
+        <div className="absolute bottom-0 left-1/3 h-[500px] w-[500px] rounded-full bg-accent/10 blur-[140px]" />
       </div>
       <Outlet />
     </div>
