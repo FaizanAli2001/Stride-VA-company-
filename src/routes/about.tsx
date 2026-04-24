@@ -1,11 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight, Compass, HeartHandshake, Sparkles, ShieldCheck } from "lucide-react";
 import { SiteNav } from "@/components/site-nav";
 import { SiteFooter } from "@/components/site-footer";
-import lintaImg from "@/assets/team-linta.jpeg";
-import malikImg from "@/assets/team-malik.jpg";
-import kulsoomImg from "@/assets/team-kulsoom.png";
-import faizanImg from "@/assets/team-faizan.png";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
@@ -15,55 +11,46 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "A stride is what full momentum feels like. We built Stride to give brilliant businesses a clear run, every single day.",
+          "Stride is a founder-led virtual assistant firm helping businesses move at full momentum — without the admin drag.",
       },
       { property: "og:title", content: "About — Stride" },
-      { property: "og:description", content: "Four founders. One mission: full momentum." },
+      {
+        property: "og:description",
+        content:
+          "Founder-led, human-first. Learn the story, mission, and values behind Stride.",
+      },
     ],
   }),
 });
 
-const team = [
+const values = [
   {
-    name: "Dr. Linta Tanwir",
-    role: "CEO",
-    img: lintaImg,
-    points: [
-      "Leads the company's direction and long-term growth",
-      "Builds trusted client relationships and partnerships",
-      "Keeps the team aligned around service excellence",
-    ],
+    icon: HeartHandshake,
+    title: "People first",
+    body: "We treat every client like a long-term partner — not a ticket in a queue.",
   },
   {
-    name: "Dr. Malik Wasif Khalid",
-    role: "CTO",
-    img: malikImg,
-    points: [
-      "Shapes the technology behind smooth client delivery",
-      "Improves systems, tools, and internal workflows",
-      "Makes operations smarter, faster, and more reliable",
-    ],
+    icon: ShieldCheck,
+    title: "Quietly reliable",
+    body: "No theatrics. We do the work, hit the deadline, and keep your day calm.",
   },
   {
-    name: "Kulsoom Waheed Psychologist",
-    role: "CMO",
-    img: kulsoomImg,
-    points: [
-      "Owns brand voice, positioning, and marketing strategy",
-      "Drives awareness through clear, human messaging",
-      "Helps Stride connect with the right clients",
-    ],
+    icon: Compass,
+    title: "Clear direction",
+    body: "We bring structure to the chaos so you always know what's moving and why.",
   },
   {
-    name: "Faizan Ali",
-    role: "COO",
-    img: faizanImg,
-    points: [
-      "Runs day-to-day operations across the business",
-      "Builds efficient processes for client support",
-      "Ensures delivery stays consistent and dependable",
-    ],
+    icon: Sparkles,
+    title: "Craft over volume",
+    body: "We'd rather do a few things brilliantly than a hundred things halfway.",
   },
+];
+
+const stats = [
+  { value: "4", label: "Founders, hands-on" },
+  { value: "20+", label: "Industries served" },
+  { value: "98%", label: "Client retention" },
+  { value: "24h", label: "Average response" },
 ];
 
 function AboutPage() {
@@ -71,67 +58,136 @@ function AboutPage() {
     <div className="min-h-screen bg-background text-foreground">
       <SiteNav />
 
-      {/* Team */}
-      <section id="team" className="mx-auto max-w-6xl px-6 pt-20 pb-24 scroll-mt-24 md:pt-28">
-        <div className="mb-12 text-center">
-          <p className="inline-flex rounded-full bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent">
-            The team
+      {/* Hero */}
+      <section className="mx-auto max-w-5xl px-6 pt-20 pb-16 text-center md:pt-28">
+        <p className="inline-flex rounded-full bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent">
+          About Stride
+        </p>
+        <h1 className="mt-5 font-display text-5xl font-bold tracking-tight md:text-6xl">
+          A stride is what full <span className="text-accent">momentum</span> feels like.
+        </h1>
+        <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
+          We built Stride because too many brilliant businesses were losing pace under
+          the weight of admin work. Our job is simple: give you a clear run so you can
+          move at full speed, every single day.
+        </p>
+      </section>
+
+      {/* Story */}
+      <section className="mx-auto max-w-5xl px-6 pb-20">
+        <div className="grid gap-10 md:grid-cols-2 md:items-start">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-widest text-accent">
+              Our story
+            </p>
+            <h2 className="mt-3 font-display text-3xl font-bold tracking-tight md:text-4xl">
+              Built by operators, for operators.
+            </h2>
+          </div>
+          <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
+            <p>
+              Stride started as a conversation between four friends who'd spent years
+              watching founders, doctors, and small teams drown in inboxes, calendars,
+              and back-office work that nobody had time for.
+            </p>
+            <p>
+              We knew the answer wasn't another faceless agency. It was a small, sharp
+              team you could actually trust — one that learns how you work and quietly
+              keeps everything moving in the background.
+            </p>
+            <p>
+              Today, Stride supports businesses across healthcare, real estate, legal,
+              and tech — handling the work that holds them back, so they can focus on
+              the work that moves them forward.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission */}
+      <section className="mx-auto max-w-5xl px-6 pb-20">
+        <div className="glass rounded-3xl p-10 md:p-14">
+          <p className="text-xs font-semibold uppercase tracking-widest text-accent">
+            Our mission
           </p>
-          <h1 className="mt-5 font-display text-5xl font-bold tracking-tight md:text-6xl">
-            Four friends. <span className="text-accent">One mission.</span>
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-            We're a small, founder-led firm. When you work with Stride, you work directly with us
-            — not a faceless account manager.
+          <h2 className="mt-3 font-display text-3xl font-bold tracking-tight md:text-4xl">
+            Give every business a clear run.
+          </h2>
+          <p className="mt-5 max-w-3xl text-lg text-muted-foreground">
+            We exist to remove friction. The recurring tasks, the inbox triage, the
+            scheduling, the follow-ups — all the small things that quietly slow great
+            people down. When those disappear, momentum takes over.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {team.map((m) => (
-            <article
-              key={m.name}
-              className="glass group flex flex-col overflow-hidden rounded-3xl transition-transform duration-500 hover:-translate-y-1"
+      </section>
+
+      {/* Values */}
+      <section className="mx-auto max-w-6xl px-6 pb-20">
+        <div className="mb-10 text-center">
+          <p className="text-xs font-semibold uppercase tracking-widest text-accent">
+            What we value
+          </p>
+          <h2 className="mt-3 font-display text-4xl font-bold tracking-tight md:text-5xl">
+            How we show up.
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {values.map((v) => (
+            <div
+              key={v.title}
+              className="glass group rounded-3xl p-6 transition-transform duration-300 hover:-translate-y-1"
             >
-              <div className="relative aspect-square w-full overflow-hidden">
-                <img
-                  src={m.img}
-                  alt={`${m.name}, ${m.role} of Stride`}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-accent/10 text-accent">
+                <v.icon className="h-5 w-5" />
               </div>
-              <div className="flex flex-1 flex-col p-6">
-                <h3 className="font-display text-xl font-semibold">{m.name}</h3>
-                <p className="mt-1 text-sm font-semibold uppercase tracking-wider text-accent">
-                  {m.role}
-                </p>
-                <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
-                  {m.points.map((p) => (
-                    <li key={p} className="flex gap-2.5">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                      <span className="leading-relaxed">{p}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </article>
+              <h3 className="mt-5 font-display text-lg font-semibold">{v.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {v.body}
+              </p>
+            </div>
           ))}
         </div>
       </section>
 
-      {/* Meet the team CTA */}
+      {/* Stats */}
+      <section className="mx-auto max-w-6xl px-6 pb-24">
+        <div className="grid grid-cols-2 gap-6 rounded-3xl border border-border/50 bg-card/40 p-8 md:grid-cols-4 md:p-10">
+          {stats.map((s) => (
+            <div key={s.label} className="text-center">
+              <p className="font-display text-4xl font-bold tracking-tight text-accent md:text-5xl">
+                {s.value}
+              </p>
+              <p className="mt-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                {s.label}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
       <section className="mx-auto max-w-4xl px-6 pb-24 text-center">
         <h2 className="font-display text-4xl font-bold tracking-tight md:text-5xl">
-          Want to <span className="text-accent">meet the team?</span>
+          Ready to <span className="text-accent">meet the team?</span>
         </h2>
         <p className="mx-auto mt-5 max-w-xl text-lg text-muted-foreground">
-          Book a free 20-minute intro call. No pitch, no pressure.
+          Get to know the four founders behind Stride — or book a free intro call.
         </p>
-        <a
-          href="/contact"
-          className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-accent-foreground shadow-lg shadow-accent/30 transition-transform hover:-translate-y-0.5"
-        >
-          Book your free intro call
-          <ArrowRight className="h-4 w-4" />
-        </a>
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <Link
+            to="/team"
+            className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-accent-foreground shadow-lg shadow-accent/30 transition-transform hover:-translate-y-0.5"
+          >
+            Meet the team
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background px-7 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
+          >
+            Book an intro call
+          </Link>
+        </div>
       </section>
 
       <SiteFooter />
