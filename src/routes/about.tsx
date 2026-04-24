@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Heart, Lock, Eye, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { SiteNav } from "@/components/site-nav";
 import { SiteFooter } from "@/components/site-footer";
 import lintaImg from "@/assets/team-linta.jpeg";
@@ -66,12 +66,6 @@ const team = [
   },
 ];
 
-const beliefs = [
-  { icon: Heart, t: "Genuinely helpful", d: "We treat your business like it's our own." },
-  { icon: Lock, t: "Discreet & trustworthy", d: "NDA-friendly. Your data stays yours." },
-  { icon: Eye, t: "Quietly proactive", d: "We don't wait to be asked. We notice and act." },
-];
-
 function AboutPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -82,49 +76,12 @@ function AboutPage() {
           About
         </p>
         <h1 className="mt-5 font-display text-5xl font-bold tracking-tight md:text-6xl">
-          A stride is what full momentum feels like.
+          Four friends. One mission.
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-          No friction, no slowdowns. We built Stride because too many brilliant businesses were
-          losing pace under the weight of admin work. Four founders, one mission: give you a clear
-          run so you can move at full speed, every single day.
+          We're a small, founder-led firm. When you work with Stride, you work directly with us —
+          not a faceless account manager.
         </p>
-      </section>
-
-      {/* Beliefs */}
-      <section className="mx-auto max-w-6xl px-6 pb-20">
-        <h2 className="text-center font-display text-3xl font-bold tracking-tight md:text-4xl">
-          What we believe
-        </h2>
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {beliefs.map((b) => (
-            <div key={b.t} className="glass rounded-2xl p-6">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 text-accent">
-                <b.icon className="h-5 w-5" />
-              </div>
-              <h3 className="mt-4 font-display text-xl font-semibold">{b.t}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{b.d}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Approach */}
-      <section className="mx-auto max-w-4xl px-6 pb-20">
-        <div className="glass rounded-3xl p-10 md:p-14">
-          <h2 className="font-display text-3xl font-bold tracking-tight md:text-4xl">
-            Our approach
-          </h2>
-          <p className="mt-5 text-lg text-muted-foreground">
-            We don't believe in cookie-cutter packages. Every business runs differently, so we spend
-            the first week learning your tone, tools, and rhythms. From there, we slot into the
-            gaps — gently, never disruptively.
-          </p>
-          <p className="mt-4 text-lg text-muted-foreground">
-            We're a small team on purpose. It means every client gets a dedicated point of contact
-            who actually knows their work, not a faceless ticket queue.
-          </p>
-        </div>
       </section>
 
       {/* Team */}
