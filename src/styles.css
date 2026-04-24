@@ -190,3 +190,8 @@
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
 }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-33.3333%); }
+}
