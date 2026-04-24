@@ -47,7 +47,7 @@ const marquee = [
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-gradient-to-b from-[oklch(0.78_0.16_55)] via-[oklch(0.88_0.11_60)] to-[oklch(0.95_0.05_65)] text-foreground">
       <SiteNav />
 
       {/* Hero */}
