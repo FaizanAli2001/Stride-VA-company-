@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Compass, HeartHandshake, Sparkles, ShieldCheck } from "lucide-react";
+import { ArrowRight, Compass, HeartHandshake, Sparkles, ShieldCheck, Rocket, Users, Clock, Heart } from "lucide-react";
 import { SiteNav } from "@/components/site-nav";
 import { SiteFooter } from "@/components/site-footer";
 
@@ -47,10 +47,10 @@ const values = [
 ];
 
 const stats = [
-  { value: "4", label: "Founders, hands-on" },
-  { value: "20+", label: "Industries served" },
-  { value: "98%", label: "Client retention" },
-  { value: "24h", label: "Average response" },
+  { icon: Rocket, value: "2025", label: "Year founded" },
+  { icon: Users, value: "4", label: "Founders, hands-on" },
+  { icon: Clock, value: "24h", label: "Response promise" },
+  { icon: Heart, value: "100%", label: "Founder-led" },
 ];
 
 function AboutPage() {
@@ -86,19 +86,19 @@ function AboutPage() {
           </div>
           <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
             <p>
-              Stride started as a conversation between four friends who'd spent years
-              watching founders, doctors, and small teams drown in inboxes, calendars,
-              and back-office work that nobody had time for.
+              Stride is a brand-new firm — founded in 2025 by four friends who spent
+              years inside startups, clinics, and small teams watching brilliant people
+              drown in inboxes, calendars, and back-office work nobody had time for.
             </p>
             <p>
-              We knew the answer wasn't another faceless agency. It was a small, sharp
+              We didn't want to build another faceless agency. We wanted a small, sharp
               team you could actually trust — one that learns how you work and quietly
               keeps everything moving in the background.
             </p>
             <p>
-              Today, Stride supports businesses across healthcare, real estate, legal,
-              and tech — handling the work that holds them back, so they can focus on
-              the work that moves them forward.
+              We're just getting started, which means every early client works directly
+              with the founders. You get our full attention, our best thinking, and a
+              partnership we're personally invested in making exceptional.
             </p>
           </div>
         </div>
@@ -154,7 +154,10 @@ function AboutPage() {
         <div className="grid grid-cols-2 gap-6 rounded-3xl border border-border/50 bg-card/40 p-8 md:grid-cols-4 md:p-10">
           {stats.map((s) => (
             <div key={s.label} className="text-center">
-              <p className="font-display text-4xl font-bold tracking-tight text-accent md:text-5xl">
+              <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-2xl bg-accent/10 text-accent">
+                <s.icon className="h-5 w-5" />
+              </div>
+              <p className="mt-4 font-display text-4xl font-bold tracking-tight text-accent md:text-5xl">
                 {s.value}
               </p>
               <p className="mt-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">
@@ -168,10 +171,11 @@ function AboutPage() {
       {/* CTA */}
       <section className="mx-auto max-w-4xl px-6 pb-24 text-center">
         <h2 className="font-display text-4xl font-bold tracking-tight md:text-5xl">
-          Ready to <span className="text-accent">meet the team?</span>
+          Be one of our <span className="text-accent">first clients.</span>
         </h2>
         <p className="mx-auto mt-5 max-w-xl text-lg text-muted-foreground">
-          Get to know the four founders behind Stride — or book a free intro call.
+          We're taking on a small group of founding clients right now. Work directly
+          with us and help shape what Stride becomes.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <Link
