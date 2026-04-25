@@ -29,10 +29,10 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Stride — Virtual Assistants for Busy Founders" },
+      { title: "Stride. Virtual Assistants for Busy Founders" },
       { name: "description", content: "Stride is a virtual assistant company helping founders and small teams handle email, calendar, CRM and the busywork that runs a business." },
       { name: "author", content: "Stride" },
-      { property: "og:title", content: "Stride — Virtual Assistants for Busy Founders" },
+      { property: "og:title", content: "Stride. Virtual Assistants for Busy Founders" },
       { property: "og:description", content: "We handle the busywork. You run the business." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
