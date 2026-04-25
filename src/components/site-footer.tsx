@@ -30,8 +30,8 @@ export function SiteFooter() {
           <h4 className="text-sm font-semibold">Contact</h4>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
             <li>
-              <a href="mailto:info@stride.con" className="hover:text-foreground">
-                info@stride.con
+              <a href="mailto:info@stride.com" className="hover:text-foreground">
+                info@stride.com
               </a>
             </li>
             <li>Mon – Fri · 9am – 6pm</li>
@@ -40,7 +40,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-border/60">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-6 py-6 text-xs text-muted-foreground md:flex-row">
-          <p>© {new Date().getFullYear()} Stride. All rights reserved.</p>
+          <p>© 2026 Stride. All rights reserved.</p>
           <p>Built for founders who'd rather be building.</p>
         </div>
       </div>

@@ -68,7 +68,7 @@ function Index() {
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a
-              href="mailto:info@stride.con"
+              href="mailto:info@stride.com"
               className="group inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-accent-foreground shadow-lg shadow-accent/20 transition-all hover:opacity-90"
             >
               Get a clear run
@@ -215,11 +215,11 @@ function Index() {
 
       {/* Founding 10 */}
       <section className="mx-auto max-w-6xl px-6 pb-24">
-        <div className="grid gap-10 rounded-3xl border border-accent/30 bg-accent/5 p-10 md:grid-cols-[1.2fr_1fr] md:items-center md:p-14">
+        <div className="grid gap-10 rounded-3xl border border-accent/30 bg-accent/5 p-10 md:grid-cols-[1.2fr_1fr] md:items-center md:p-14 text-background">
           <div>
             <Sparkles className="h-7 w-7 text-accent" />
             <h2 className="mt-4 font-display text-3xl font-bold tracking-tight md:text-4xl">
-              Be one of our first 10.
+              Be one of our first 10 clients.
             </h2>
             <p className="mt-4 text-muted-foreground md:text-lg">
               We're keeping the founding roster small so every client gets real attention. No
@@ -227,7 +227,7 @@ function Index() {
               shape how we work.
             </p>
             <a
-              href="mailto:info@stride.con"
+              href="mailto:info@stride.com"
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground hover:opacity-90"
             >
               Apply for a founding spot
@@ -290,10 +290,10 @@ function Index() {
               20 minutes on a call. We'll map what to hand off first. No pitch, no pressure.
             </p>
             <a
-              href="mailto:info@stride.con"
+              href="mailto:info@stride.com"
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-accent-foreground hover:opacity-90"
             >
-              <span>Email info@stride.con</span>
+              <span>Email info@stride.com</span>
               <ArrowRight className="h-4 w-4" />
             </a>
           </div>
