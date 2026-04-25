@@ -38,7 +38,7 @@ const marquee = [
   "Inbox triage",
   "Calendar wrangling",
   "CRM hygiene",
-  "Client follow-ups",
+  "Client follow ups",
   "Travel & expenses",
   "Document prep",
   "Lead enrichment",
@@ -131,8 +131,8 @@ function Index() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {[
-              { icon: Rocket, t: "Founder-led", d: "You work directly with the people who built this." },
-              { icon: Target, t: "Hyper-focused", d: "A small client roster means deep attention on yours." },
+              { icon: Rocket, t: "Founder led", d: "You work directly with the people who built this." },
+              { icon: Target, t: "Hyper focused", d: "A small client roster means deep attention on yours." },
               { icon: Zap, t: "Fast onboarding", d: "Live in 5 business days. No 6-week kickoffs." },
               { icon: ShieldCheck, t: "Cancel anytime", d: "Earn your trust monthly. No lock ins." },
             ].map((f) => (
@@ -161,8 +161,8 @@ function Index() {
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {[
             { icon: Lock, t: "NDA + secure access", d: "Password vaults, scoped logins, signed agreements from day one." },
-            { icon: Zap, t: "Same-day response", d: "Replies inside one business day on every plan. Usually faster." },
-            { icon: ShieldCheck, t: "No lock-in", d: "Month-to-month. Pause or cancel with 14 days' notice." },
+            { icon: Zap, t: "Same day response", d: "Replies inside one business day on every plan. Usually faster." },
+            { icon: ShieldCheck, t: "No lock in", d: "Month to month. Pause or cancel with 14 days' notice." },
           ].map((f) => (
             <div key={f.t} className="glass rounded-2xl p-6">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 text-accent">
@@ -238,7 +238,7 @@ function Index() {
             {[
               "Direct Slack/WhatsApp line to the founders",
               "Priority onboarding inside one week",
-              "Locked-in pricing as we grow",
+              "Locked in pricing as we grow",
             ].map((b) => (
               <li key={b} className="glass flex items-start gap-3 rounded-xl p-4">
                 <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-accent" />
