@@ -76,8 +76,8 @@ function RootComponent() {
     <div className="relative min-h-screen overflow-x-hidden">
       {/* Ambient brand glow — fixed across all pages */}
       <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute -top-40 -left-40 h-[750px] w-[750px] rounded-full bg-accent/30 blur-[160px]" />
-        <div className="absolute -bottom-40 -right-40 h-[650px] w-[650px] rounded-full bg-accent/20 blur-[160px]" />
+        <div className="absolute -top-40 -left-40 h-[600px] w-[600px] rounded-full bg-accent/10 blur-[160px]" />
+        <div className="absolute -bottom-40 -right-40 h-[500px] w-[500px] rounded-full bg-primary/10 blur-[160px]" />
       </div>
       <Outlet />
       <Toaster richColors position="top-center" />
