@@ -15,13 +15,13 @@ export const Route = createFileRoute("/services")({
   component: ServicesPage,
   head: () => ({
     meta: [
-      { title: "Services — Stride" },
+      { title: "Services. Stride" },
       {
         name: "description",
         content:
-          "Admin support, shaped around how you actually work. Email, calendar, CRM, client comms, file ops and general VA support — month-to-month.",
+          "Admin support, shaped around how you actually work. Email, calendar, CRM, client comms, file ops and general VA support, month to month.",
       },
-      { property: "og:title", content: "Services — Stride" },
+      { property: "og:title", content: "Services. Stride" },
       { property: "og:description", content: "Mix and match. Cancel anytime." },
     ],
   }),
@@ -43,7 +43,7 @@ const services = [
   {
     icon: Database,
     title: "CRM management",
-    desc: "Keep your CRM clean, current, and useful — HubSpot, Pipedrive, Notion, or Airtable.",
+    desc: "Keep your CRM clean, current, and useful. HubSpot, Pipedrive, Notion, or Airtable.",
     bullets: ["Data entry & cleanup", "Pipeline updates", "Follow-up sequences", "Reporting"],
   },
   {
@@ -78,7 +78,7 @@ function ServicesPage() {
           Admin support, shaped around how you actually work.
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-          Mix and match. Start with one area, add more as you go. Every plan is monthly — cancel or
+          Mix and match. Start with one area, add more as you go. Every plan is monthly. Cancel or
           pause anytime.
         </p>
       </section>
@@ -112,7 +112,7 @@ function ServicesPage() {
             Not sure which fits?
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
-            Tell us what your week looks like. We'll suggest the right starting point — no upsell.
+            Tell us what your week looks like. We'll suggest the right starting point. No upsell.
           </p>
           <Link
             to="/contact"
