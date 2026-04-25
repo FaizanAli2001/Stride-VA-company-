@@ -63,40 +63,40 @@
 
 :root {
   --radius: 0.75rem;
-  /* Stride brand — Navy Trust (Light mode)
-     Crisp paper background, deep navy ink #0f1b3d,
-     Steel-blue accent #3b6fa0, brass highlight */
-  --background: oklch(0.985 0.005 250);
-  --foreground: oklch(0.18 0.06 255);
+  /* Stride brand — Midnight Indigo (Light mode)
+     Crisp off-white background, deep navy ink,
+     Electric indigo accent #4f46e5 */
+  --background: oklch(0.985 0.004 270);
+  --foreground: oklch(0.18 0.04 275);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.06 255);
+  --card-foreground: oklch(0.18 0.04 275);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.06 255);
-  /* Deep navy primary (#0f1b3d) */
-  --primary: oklch(0.22 0.08 258);
-  --primary-foreground: oklch(0.985 0.005 250);
-  /* Soft navy-tinted secondary */
-  --secondary: oklch(0.95 0.015 250);
-  --secondary-foreground: oklch(0.22 0.08 258);
-  --muted: oklch(0.955 0.01 250);
-  --muted-foreground: oklch(0.46 0.04 255);
-  /* Steel-blue accent (#3b6fa0) */
-  --accent: oklch(0.52 0.13 250);
-  --accent-foreground: oklch(0.985 0.005 250);
+  --popover-foreground: oklch(0.18 0.04 275);
+  /* Deep navy primary (#141432) */
+  --primary: oklch(0.22 0.07 275);
+  --primary-foreground: oklch(0.985 0.004 270);
+  /* Soft indigo-tinted secondary */
+  --secondary: oklch(0.95 0.018 270);
+  --secondary-foreground: oklch(0.22 0.07 275);
+  --muted: oklch(0.955 0.012 270);
+  --muted-foreground: oklch(0.45 0.03 275);
+  /* Electric indigo accent (#4f46e5) */
+  --accent: oklch(0.55 0.22 275);
+  --accent-foreground: oklch(0.985 0.004 270);
   --destructive: oklch(0.6 0.22 27);
   --destructive-foreground: oklch(0.985 0.004 270);
-  --border: oklch(0.9 0.012 250);
-  --input: oklch(0.92 0.012 250);
-  --ring: oklch(0.52 0.13 250);
+  --border: oklch(0.9 0.012 270);
+  --input: oklch(0.92 0.012 270);
+  --ring: oklch(0.55 0.22 275);
   /* Glass surfaces */
-  --glass-bg: oklch(1 0 0 / 70%);
-  --glass-border: oklch(0.95 0.01 250 / 80%);
-  --glass-shadow: 0 10px 40px oklch(0.22 0.08 258 / 12%);
-  /* Page-wide subtle navy gradient (light) */
+  --glass-bg: oklch(1 0 0 / 65%);
+  --glass-border: oklch(1 0 0 / 70%);
+  --glass-shadow: 0 8px 32px oklch(0.22 0.07 275 / 10%);
+  /* Page-wide subtle indigo gradient (light) */
   --gradient-page: linear-gradient(
     to bottom,
-    oklch(0.97 0.02 255),
-    oklch(0.985 0.008 250) 40%,
+    oklch(0.97 0.025 275),
+    oklch(0.985 0.012 270) 40%,
     oklch(1 0 0)
   );
   --chart-1: oklch(0.646 0.222 41.116);
@@ -115,8 +115,8 @@
 }
 
 @theme inline {
-  --font-display: "Instrument Serif", Georgia, serif;
-  --font-sans: "Work Sans", system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
   --color-ink: var(--foreground);
   --color-cream: var(--background);
   --color-coral: var(--accent);
@@ -124,48 +124,46 @@
 
 @layer base {
   html {
-    font-family: "Work Sans", system-ui, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-family: "Inter", system-ui, sans-serif;
   }
   h1, h2, h3, .font-display {
-    font-family: "Instrument Serif", Georgia, serif;
-    letter-spacing: -0.015em;
-    font-weight: 400;
+    font-family: "Fraunces", Georgia, serif;
+    letter-spacing: -0.02em;
   }
 }
 
 .dark {
-  /* Stride brand — Navy Trust (Dark mode)
-     Deep navy near-black, steel-blue accent */
-  --background: oklch(0.13 0.04 258);
-  --foreground: oklch(0.96 0.01 250);
-  --card: oklch(0.18 0.05 258);
-  --card-foreground: oklch(0.96 0.01 250);
-  --popover: oklch(0.18 0.05 258);
-  --popover-foreground: oklch(0.96 0.01 250);
-  --primary: oklch(0.96 0.01 250);
-  --primary-foreground: oklch(0.13 0.04 258);
-  --secondary: oklch(0.24 0.05 258);
-  --secondary-foreground: oklch(0.96 0.01 250);
-  --muted: oklch(0.24 0.05 258);
-  --muted-foreground: oklch(0.72 0.025 250);
-  --accent: oklch(0.68 0.13 245);
-  --accent-foreground: oklch(0.13 0.04 258);
+  /* Stride brand — Midnight Indigo (Dark mode)
+     Near-black navy #0a0a1a, deep navy surfaces,
+     Bright indigo accent */
+  --background: oklch(0.12 0.03 275);
+  --foreground: oklch(0.97 0.01 270);
+  --card: oklch(0.18 0.05 275);
+  --card-foreground: oklch(0.97 0.01 270);
+  --popover: oklch(0.18 0.05 275);
+  --popover-foreground: oklch(0.97 0.01 270);
+  --primary: oklch(0.97 0.01 270);
+  --primary-foreground: oklch(0.12 0.03 275);
+  --secondary: oklch(0.24 0.06 275);
+  --secondary-foreground: oklch(0.97 0.01 270);
+  --muted: oklch(0.24 0.06 275);
+  --muted-foreground: oklch(0.72 0.03 275);
+  --accent: oklch(0.65 0.22 275);
+  --accent-foreground: oklch(0.12 0.03 275);
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: oklch(0.97 0.01 270);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.68 0.13 245);
-  --glass-bg: oklch(0.2 0.05 258 / 60%);
+  --ring: oklch(0.65 0.22 275);
+  --glass-bg: oklch(0.2 0.05 275 / 60%);
   --glass-border: oklch(1 0 0 / 12%);
   --glass-shadow: 0 8px 32px oklch(0 0 0 / 40%);
-  /* Page-wide deep navy gradient (night) */
+  /* Page-wide deep midnight indigo gradient (night) */
   --gradient-page: linear-gradient(
     to bottom,
-    oklch(0.1 0.04 258),
-    oklch(0.14 0.05 258) 45%,
-    oklch(0.2 0.06 258)
+    oklch(0.1 0.04 275),
+    oklch(0.14 0.06 275) 45%,
+    oklch(0.2 0.08 275)
   );
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);

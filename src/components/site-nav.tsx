@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 export function SiteNav() {
@@ -14,20 +14,17 @@ export function SiteNav() {
   ];
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border/50 bg-background/75 backdrop-blur-xl">
-      <div className="mx-auto flex h-18 max-w-6xl items-center justify-between px-6 py-3">
-        <Link to="/" className="group flex items-center gap-2.5 leading-none">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground font-display text-xl">
-            S
+    <header className="sticky top-0 z-40 border-b border-border/40 bg-background/60 backdrop-blur-xl">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+        <Link to="/" className="group flex flex-col leading-none">
+          <span className="font-display text-2xl font-bold tracking-tight">
+            STR<span className="text-accent">/</span>IDE
           </span>
-          <span className="flex flex-col leading-tight">
-            <span className="font-display text-2xl tracking-tight">Stride</span>
-            <span className="text-[10px] font-medium uppercase tracking-[0.22em] text-muted-foreground">
-              Executive Support
-            </span>
+          <span className="mt-0.5 text-[10px] font-medium uppercase tracking-[0.25em] text-muted-foreground">
+            Virtual Assistant
           </span>
         </Link>
-        <nav className="hidden items-center gap-9 md:flex">
+        <nav className="hidden items-center gap-8 md:flex">
           {links.map((l, i) => (
             <Link
               key={`${l.to}-${l.label}-${i}`}
@@ -43,13 +40,6 @@ export function SiteNav() {
         </nav>
         <div className="hidden items-center gap-3 md:flex">
           <ThemeToggle />
-          <Link
-            to="/contact"
-            className="group inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90"
-          >
-            Book a call
-            <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-          </Link>
         </div>
         <div className="flex items-center gap-2 md:hidden">
           <ThemeToggle />
@@ -75,13 +65,12 @@ export function SiteNav() {
                 {l.label}
               </Link>
             ))}
-            <Link
-              to="/contact"
-              onClick={() => setOpen(false)}
-              className="mt-2 rounded-full bg-primary px-5 py-2.5 text-center text-sm font-medium text-primary-foreground"
+            <a
+              href="mailto:info@stride.con"
+              className="mt-2 rounded-full bg-accent px-5 py-2 text-center text-sm font-medium text-accent-foreground"
             >
-              Book a call
-            </Link>
+              Get in touch
+            </a>
           </div>
         </div>
       )}
