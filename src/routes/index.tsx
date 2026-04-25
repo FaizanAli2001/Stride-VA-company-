@@ -66,13 +66,13 @@ function Index() {
             emails, calendars, CRM and everything in between.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="mailto:info@stride.com"
+            <Link
+              to="/contact"
               className="group inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-accent-foreground shadow-lg shadow-accent/20 transition-all hover:opacity-90"
             >
               Get a clear run
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
+            </Link>
             <Link
               to="/services"
               className="glass inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-card"
@@ -252,13 +252,13 @@ function Index() {
             <p className="mt-5 text-lg text-primary-foreground/80">
               20 minutes on a call. We'll map what to hand off first. No pitch, no pressure.
             </p>
-            <a
-              href="mailto:info@stride.com"
+            <Link
+              to="/contact"
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-accent-foreground hover:opacity-90"
             >
-              <span>Email info@stride.com</span>
+              <span>Book your free intro call</span>
               <ArrowRight className="h-4 w-4" />
-            </a>
+            </Link>
           </div>
         </div>
       </section>
