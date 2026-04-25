@@ -213,42 +213,6 @@ function Index() {
         </div>
       </section>
 
-      {/* Founding 10 */}
-      <section className="mx-auto max-w-6xl px-6 pb-24">
-        <div className="grid gap-10 rounded-3xl border border-accent/30 bg-accent/5 p-10 md:grid-cols-[1.2fr_1fr] md:items-center md:p-14 text-background">
-          <div>
-            <Sparkles className="h-7 w-7 text-accent" />
-            <h2 className="mt-4 font-display text-3xl font-bold tracking-tight md:text-4xl">
-              Be our first client.
-            </h2>
-            <p className="mt-4 text-muted-foreground md:text-lg">
-              We're keeping the founding roster small so every client gets real attention. No
-              discount gimmick. Just early access, direct line to the founders, and the chance to
-              shape how we work.
-            </p>
-            <a
-              href="mailto:info@stride.com"
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground hover:opacity-90"
-            >
-              Apply for a founding spot
-              <ArrowRight className="h-4 w-4" />
-            </a>
-          </div>
-          <ul className="space-y-3 text-sm">
-            {[
-              "Direct Slack/WhatsApp line to the founders",
-              "Priority onboarding inside one week",
-              "Locked in pricing as we grow",
-            ].map((b) => (
-              <li key={b} className="glass flex items-start gap-3 rounded-xl p-4">
-                <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-accent" />
-                <span>{b}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
       {/* Built for */}
       <section className="mx-auto max-w-6xl px-6 pb-24">
         <div className="text-center">
