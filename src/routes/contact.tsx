@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteNav } from "@/components/site-nav";
 import { SiteFooter } from "@/components/site-footer";
-import { Mail, Clock, ArrowRight } from "lucide-react";
+import { Mail, Calendar, MessageCircle } from "lucide-react";
+import { useState } from "react";
 
 export const Route = createFileRoute("/contact")({
   component: ContactPage,
@@ -16,55 +17,152 @@ export const Route = createFileRoute("/contact")({
 });
 
 function ContactPage() {
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const name = String(data.get("name") || "");
+    const email = String(data.get("email") || "");
+    const company = String(data.get("company") || "");
+    const message = String(data.get("message") || "");
+    const subject = encodeURIComponent(`New inquiry from ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nCompany: ${company}\n\n${message}`
+    );
+    window.location.href = `mailto:info@stride.com?subject=${subject}&body=${body}`;
+    setSubmitted(true);
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteNav />
-      <section className="mx-auto max-w-4xl px-6 pt-20 pb-24 md:pt-28">
-        <p className="text-sm font-medium text-accent">Contact</p>
-        <h1 className="mt-3 font-display text-5xl font-semibold tracking-tight md:text-6xl">
-          Tell us what's eating your week.
+      <section className="mx-auto max-w-6xl px-6 pt-20 pb-12 md:pt-28">
+        <div className="inline-flex items-center rounded-full bg-accent/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-accent">
+          Contact
+        </div>
+        <h1 className="mt-6 font-display text-5xl font-semibold tracking-tight md:text-6xl">
+          Let's get you in <span className="text-accent">full stride.</span>
         </h1>
-        <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-          Send us a quick note about what you do, what's piling up, and how many hours a week
-          you'd want back. We'll reply within one business day with next steps.
+        <p className="mt-6 max-w-xl text-lg text-muted-foreground">
+          Tell us a bit about your week and what's piling up. We'll respond within one business day with next steps.
         </p>
+      </section>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
-          <a
-            href="mailto:info@stride.con"
-            className="glass group flex items-start gap-4 rounded-2xl p-6 transition-all hover:-translate-y-0.5"
+      <section className="mx-auto max-w-6xl px-6 pb-24">
+        <div className="grid gap-6 lg:grid-cols-[1.4fr_1fr]">
+          {/* Form */}
+          <form
+            onSubmit={handleSubmit}
+            className="glass rounded-3xl border border-accent/20 p-8 md:p-10"
           >
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/15 text-accent">
-              <Mail className="h-5 w-5" />
+            <div className="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label htmlFor="name" className="block text-sm font-semibold">
+                  Your name
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  required
+                  maxLength={100}
+                  className="mt-2 w-full rounded-xl border border-border bg-background/40 px-4 py-3 text-sm text-foreground outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/30"
+                />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-semibold">
+                  Email
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  maxLength={255}
+                  className="mt-2 w-full rounded-xl border border-border bg-background/40 px-4 py-3 text-sm text-foreground outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/30"
+                />
+              </div>
             </div>
-            <div>
-              <h3 className="font-display text-xl font-semibold">Email us</h3>
-              <p className="mt-1 text-sm text-muted-foreground">The fastest way to reach us.</p>
-              <p className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-foreground">
-                info@stride.con
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+
+            <div className="mt-5">
+              <label htmlFor="company" className="block text-sm font-semibold">
+                Company (optional)
+              </label>
+              <input
+                id="company"
+                name="company"
+                type="text"
+                maxLength={100}
+                className="mt-2 w-full rounded-xl border border-border bg-background/40 px-4 py-3 text-sm text-foreground outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/30"
+              />
+            </div>
+
+            <div className="mt-5">
+              <label htmlFor="message" className="block text-sm font-semibold">
+                What can we help with?
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows={5}
+                maxLength={1000}
+                placeholder="A few sentences about your week & where time is leaking..."
+                className="mt-2 w-full rounded-xl border border-border bg-background/40 px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-muted-foreground/60 focus:border-accent focus:ring-2 focus:ring-accent/30"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="mt-6 inline-flex items-center justify-center rounded-full bg-accent px-7 py-3 text-sm font-semibold text-accent-foreground shadow-lg shadow-accent/30 transition hover:scale-[1.02] hover:bg-accent/90"
+            >
+              {submitted ? "Opening your email..." : "Send message"}
+            </button>
+          </form>
+
+          {/* Info cards */}
+          <div className="flex flex-col gap-6">
+            <div className="glass rounded-3xl border border-accent/20 p-7">
+              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-accent/20 text-accent">
+                <Calendar className="h-5 w-5" />
+              </div>
+              <h3 className="mt-5 font-display text-xl font-semibold">Book an intro call</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Free 20 minutes. We'll figure out if we're a fit.
               </p>
+              <a
+                href="mailto:info@stride.com"
+                className="mt-4 inline-block text-sm font-medium text-accent hover:underline"
+              >
+                info@stride.com
+              </a>
             </div>
-          </a>
-          <div className="glass flex items-start gap-4 rounded-2xl p-6">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/15 text-accent">
-              <Clock className="h-5 w-5" />
+
+            <div className="glass rounded-3xl border border-accent/20 p-7">
+              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-accent/20 text-accent">
+                <Mail className="h-5 w-5" />
+              </div>
+              <h3 className="mt-5 font-display text-xl font-semibold">Email us</h3>
+              <a
+                href="mailto:info@stride.com"
+                className="mt-2 block text-sm font-medium text-foreground hover:text-accent"
+              >
+                info@stride.com
+              </a>
+              <p className="mt-1 text-sm text-muted-foreground">Reply within 1 business day</p>
             </div>
-            <div>
-              <h3 className="font-display text-xl font-semibold">Hours</h3>
-              <p className="mt-1 text-sm text-muted-foreground">Monday to Friday</p>
-              <p className="mt-3 text-sm font-medium">9:00 AM to 6:00 PM</p>
+
+            <div className="glass rounded-3xl border border-accent/20 p-7">
+              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-accent/20 text-accent">
+                <MessageCircle className="h-5 w-5" />
+              </div>
+              <h3 className="mt-5 font-display text-xl font-semibold">Office hours</h3>
+              <p className="mt-2 text-sm text-muted-foreground">Monday to Friday</p>
+              <p className="text-sm font-medium">9am to 6pm (your timezone)</p>
             </div>
           </div>
-        </div>
-
-        <div className="mt-16 rounded-3xl bg-primary p-10 text-primary-foreground md:p-12">
-          <h2 className="font-display text-3xl font-semibold tracking-tight md:text-4xl">
-            Not sure what to ask for?
-          </h2>
-          <p className="mt-3 max-w-xl text-primary-foreground/80">
-            Just send a few sentences about your day. We'll suggest where a virtual assistant could save you the most time.
-          </p>
         </div>
       </section>
       <SiteFooter />
