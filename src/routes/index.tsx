@@ -7,7 +7,6 @@ import {
   Users,
   Building2,
   Briefcase,
-  Sparkles,
   Rocket,
   Target,
 } from "lucide-react";
