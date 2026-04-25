@@ -34,7 +34,7 @@ export function SiteFooter() {
                 info@stride.com
               </a>
             </li>
-            <li>Mon – Fri · 9am – 6pm</li>
+            <li>Mon to Fri · 9am to 6pm</li>
           </ul>
         </div>
       </div>
