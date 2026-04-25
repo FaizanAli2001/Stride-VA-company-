@@ -18,13 +18,13 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Stride — We handle the work. You keep the momentum." },
+      { title: "Stride. We handle the work. You keep the momentum." },
       {
         name: "description",
         content:
-          "Stride is a boutique virtual assistant firm helping busy professionals move faster — emails, calendars, CRM and everything in between.",
+          "Stride is a boutique virtual assistant firm helping busy professionals move faster: emails, calendars, CRM and everything in between.",
       },
-      { property: "og:title", content: "Stride — We handle the work. You keep the momentum." },
+      { property: "og:title", content: "Stride. We handle the work. You keep the momentum." },
       {
         property: "og:description",
         content: "Boutique virtual assistant support for founders and small teams.",
@@ -38,7 +38,7 @@ const marquee = [
   "Inbox triage",
   "Calendar wrangling",
   "CRM hygiene",
-  "Client follow-ups",
+  "Client follow ups",
   "Travel & expenses",
   "Document prep",
   "Lead enrichment",
@@ -63,7 +63,7 @@ function Index() {
             <span className="text-accent">You keep the momentum.</span>
           </h1>
           <p className="mx-auto mt-8 max-w-2xl text-lg text-muted-foreground md:text-xl">
-            Stride is a boutique virtual assistant firm helping busy professionals move faster —
+            Stride is a boutique virtual assistant firm helping busy professionals move faster:
             emails, calendars, CRM and everything in between.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
@@ -131,10 +131,10 @@ function Index() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {[
-              { icon: Rocket, t: "Founder-led", d: "You work directly with the people who built this." },
-              { icon: Target, t: "Hyper-focused", d: "A small client roster means deep attention on yours." },
+              { icon: Rocket, t: "Founder led", d: "You work directly with the people who built this." },
+              { icon: Target, t: "Hyper focused", d: "A small client roster means deep attention on yours." },
               { icon: Zap, t: "Fast onboarding", d: "Live in 5 business days. No 6-week kickoffs." },
-              { icon: ShieldCheck, t: "Cancel anytime", d: "Earn your trust monthly — no lock-ins." },
+              { icon: ShieldCheck, t: "Cancel anytime", d: "Earn your trust monthly. No lock ins." },
             ].map((f) => (
               <div key={f.t} className="glass rounded-2xl p-6">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/15 text-accent">
@@ -161,8 +161,8 @@ function Index() {
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {[
             { icon: Lock, t: "NDA + secure access", d: "Password vaults, scoped logins, signed agreements from day one." },
-            { icon: Zap, t: "Same-day response", d: "Replies inside one business day on every plan. Usually faster." },
-            { icon: ShieldCheck, t: "No lock-in", d: "Month-to-month. Pause or cancel with 14 days' notice." },
+            { icon: Zap, t: "Same day response", d: "Replies inside one business day on every plan. Usually faster." },
+            { icon: ShieldCheck, t: "No lock in", d: "Month to month. Pause or cancel with 14 days' notice." },
           ].map((f) => (
             <div key={f.t} className="glass rounded-2xl p-6">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 text-accent">
@@ -196,7 +196,7 @@ function Index() {
               Built by four friends who've been the bottleneck.
             </h2>
             <p className="mt-6 max-w-3xl text-lg italic text-muted-foreground">
-              "We started Stride after watching too many founders — ourselves included — drown in
+              "We started Stride after watching too many founders, ourselves included, drown in
               inbox triage and scheduling tetris. No agency layers, no junior pool. Just four of us,
               in your corner, treating your business like our own."
             </p>
@@ -223,7 +223,7 @@ function Index() {
             </h2>
             <p className="mt-4 text-muted-foreground md:text-lg">
               We're keeping the founding roster small so every client gets real attention. No
-              discount gimmick — just early access, direct line to the founders, and the chance to
+              discount gimmick. Just early access, direct line to the founders, and the chance to
               shape how we work.
             </p>
             <a
@@ -238,7 +238,7 @@ function Index() {
             {[
               "Direct Slack/WhatsApp line to the founders",
               "Priority onboarding inside one week",
-              "Locked-in pricing as we grow",
+              "Locked in pricing as we grow",
             ].map((b) => (
               <li key={b} className="glass flex items-start gap-3 rounded-xl p-4">
                 <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-accent" />

@@ -7,17 +7,17 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
   head: () => ({
     meta: [
-      { title: "About — Stride" },
+      { title: "About Stride" },
       {
         name: "description",
         content:
-          "Stride is a founder-led virtual assistant firm helping businesses move at full momentum — without the admin drag.",
+          "Stride is a founder led virtual assistant firm helping businesses move at full momentum, without the admin drag.",
       },
-      { property: "og:title", content: "About — Stride" },
+      { property: "og:title", content: "About Stride" },
       {
         property: "og:description",
         content:
-          "Founder-led, human-first. Learn the story, mission, and values behind Stride.",
+          "Founder led, human first. Learn the story, mission, and values behind Stride.",
       },
     ],
   }),
@@ -27,7 +27,7 @@ const values = [
   {
     icon: HeartHandshake,
     title: "People first",
-    body: "We treat every client like a long-term partner — not a ticket in a queue.",
+    body: "We treat every client like a long term partner, not a ticket in a queue.",
   },
   {
     icon: ShieldCheck,
@@ -47,10 +47,10 @@ const values = [
 ];
 
 const stats = [
-  { icon: Rocket, value: "2025", label: "Year founded" },
-  { icon: Users, value: "4", label: "Founders, hands-on" },
+  { icon: Rocket, value: "2026", label: "Year founded" },
+  { icon: Users, value: "4", label: "Founders, hands on" },
   { icon: Clock, value: "24h", label: "Response promise" },
-  { icon: Heart, value: "100%", label: "Founder-led" },
+  { icon: Heart, value: "100%", label: "Founder led" },
 ];
 
 function AboutPage() {
@@ -86,13 +86,13 @@ function AboutPage() {
           </div>
           <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
             <p>
-              Stride is a brand-new firm — founded in 2025 by four friends who spent
+              Stride is a brand new firm, founded in 2026 by four friends who spent
               years inside startups, clinics, and small teams watching brilliant people
-              drown in inboxes, calendars, and back-office work nobody had time for.
+              drown in inboxes, calendars, and back office work nobody had time for.
             </p>
             <p>
               We didn't want to build another faceless agency. We wanted a small, sharp
-              team you could actually trust — one that learns how you work and quietly
+              team you could actually trust, one that learns how you work and quietly
               keeps everything moving in the background.
             </p>
             <p>
@@ -115,7 +115,7 @@ function AboutPage() {
           </h2>
           <p className="mt-5 max-w-3xl text-lg text-muted-foreground">
             We exist to remove friction. The recurring tasks, the inbox triage, the
-            scheduling, the follow-ups — all the small things that quietly slow great
+            scheduling, the follow ups, all the small things that quietly slow great
             people down. When those disappear, momentum takes over.
           </p>
         </div>
@@ -171,7 +171,7 @@ function AboutPage() {
       {/* CTA */}
       <section className="mx-auto max-w-4xl px-6 pb-24 text-center">
         <h2 className="font-display text-4xl font-bold tracking-tight md:text-5xl">
-          Be one of our <span className="text-accent">first clients.</span>
+          Be one of our <span className="text-accent">first client.</span>
         </h2>
         <p className="mx-auto mt-5 max-w-xl text-lg text-muted-foreground">
           We're taking on a small group of founding clients right now. Work directly

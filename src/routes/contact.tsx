@@ -7,9 +7,9 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
   head: () => ({
     meta: [
-      { title: "Contact — Stride Virtual Assistants" },
+      { title: "Contact. Stride Virtual Assistants" },
       { name: "description", content: "Get in touch with Stride. Email info@stride.con and tell us what you need help with." },
-      { property: "og:title", content: "Contact — Stride" },
+      { property: "og:title", content: "Contact. Stride" },
       { property: "og:description", content: "Email us. We reply within one business day." },
     ],
   }),
@@ -52,8 +52,8 @@ function ContactPage() {
             </div>
             <div>
               <h3 className="font-display text-xl font-semibold">Hours</h3>
-              <p className="mt-1 text-sm text-muted-foreground">Monday – Friday</p>
-              <p className="mt-3 text-sm font-medium">9:00 AM – 6:00 PM</p>
+              <p className="mt-1 text-sm text-muted-foreground">Monday to Friday</p>
+              <p className="mt-3 text-sm font-medium">9:00 AM to 6:00 PM</p>
             </div>
           </div>
         </div>
