@@ -11,13 +11,13 @@ export const Route = createFileRoute("/team")({
   component: TeamPage,
   head: () => ({
     meta: [
-      { title: "Team — Stride" },
+      { title: "Team. Stride" },
       {
         name: "description",
         content:
-          "Meet the four founders behind Stride. A small, founder-led firm working directly with you.",
+          "Meet the four founders behind Stride. A small, founder led firm working directly with you.",
       },
-      { property: "og:title", content: "Team — Stride" },
+      { property: "og:title", content: "Team. Stride" },
       { property: "og:description", content: "Four founders. One mission: full momentum." },
     ],
   }),
@@ -29,7 +29,7 @@ const team = [
     role: "CEO",
     img: lintaImg,
     points: [
-      "Leads the company's direction and long-term growth",
+      "Leads the company's direction and long term growth",
       "Builds trusted client relationships and partnerships",
       "Keeps the team aligned around service excellence",
     ],
@@ -59,7 +59,7 @@ const team = [
     role: "COO",
     img: faizanImg,
     points: [
-      "Runs day-to-day operations across the business",
+      "Runs day to day operations across the business",
       "Builds efficient processes for client support",
       "Ensures delivery stays consistent and dependable",
     ],
@@ -81,8 +81,8 @@ function TeamPage() {
             Four friends. <span className="text-accent">One mission.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-            We're a small, founder-led firm. When you work with Stride, you work directly with us
-            — not a faceless account manager.
+            We're a small, founder led firm. When you work with Stride, you work directly with us,
+            not a faceless account manager.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -123,7 +123,7 @@ function TeamPage() {
           Want to <span className="text-accent">meet the team?</span>
         </h2>
         <p className="mx-auto mt-5 max-w-xl text-lg text-muted-foreground">
-          Book a free 20-minute intro call. No pitch, no pressure.
+          Book a free 20 minute intro call. No pitch, no pressure.
         </p>
         <a
           href="/contact"
