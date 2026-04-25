@@ -3,6 +3,8 @@ import { SiteNav } from "@/components/site-nav";
 import { SiteFooter } from "@/components/site-footer";
 import { Mail, Calendar, MessageCircle } from "lucide-react";
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 export const Route = createFileRoute("/contact")({
   component: ContactPage,
@@ -17,9 +19,10 @@ export const Route = createFileRoute("/contact")({
 });
 
 function ContactPage() {
+  const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
@@ -27,12 +30,29 @@ function ContactPage() {
     const email = String(data.get("email") || "");
     const company = String(data.get("company") || "");
     const message = String(data.get("message") || "");
-    const subject = encodeURIComponent(`New inquiry from ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nCompany: ${company}\n\n${message}`
-    );
-    window.location.href = `mailto:info@stride.com?subject=${subject}&body=${body}`;
+
+    if (!name.trim() || !email.trim() || !message.trim()) {
+      toast.error("Please fill in your name, email, and message.");
+      return;
+    }
+
+    setSubmitting(true);
+    const { error } = await supabase.from("contact_submissions").insert({
+      name: name.trim().slice(0, 100),
+      email: email.trim().slice(0, 255),
+      company: company.trim().slice(0, 100) || null,
+      message: message.trim().slice(0, 2000),
+    });
+    setSubmitting(false);
+
+    if (error) {
+      toast.error("Could not send your message. Please try again.");
+      return;
+    }
+
+    toast.success("Message received. We'll be in touch soon.");
     setSubmitted(true);
+    form.reset();
   };
 
   return (
@@ -116,9 +136,10 @@ function ContactPage() {
 
             <button
               type="submit"
-              className="mt-6 inline-flex items-center justify-center rounded-full bg-accent px-7 py-3 text-sm font-semibold text-accent-foreground shadow-lg shadow-accent/30 transition hover:scale-[1.02] hover:bg-accent/90"
+              disabled={submitting}
+              className="mt-6 inline-flex items-center justify-center rounded-full bg-accent px-7 py-3 text-sm font-semibold text-accent-foreground shadow-lg shadow-accent/30 transition hover:scale-[1.02] hover:bg-accent/90 disabled:cursor-not-allowed disabled:opacity-60"
             >
-              {submitted ? "Opening your email..." : "Send message"}
+              {submitting ? "Sending..." : submitted ? "Sent ✓ Send another" : "Send message"}
             </button>
           </form>
 
