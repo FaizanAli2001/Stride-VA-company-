@@ -181,7 +181,7 @@ function ContactPage() {
               </div>
               <h3 className="mt-5 font-display text-xl font-semibold">Office hours</h3>
               <p className="mt-2 text-sm text-muted-foreground">Monday to Friday</p>
-              <p className="text-sm font-medium">9am to 6pm (your timezone)</p>
+              <p className="text-sm font-medium">9am to 6pm EST</p>
             </div>
           </div>
         </div>
