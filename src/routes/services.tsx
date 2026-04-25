@@ -70,15 +70,15 @@ function ServicesPage() {
   return (
     <div className="min-h-screen text-foreground" style={{ background: "var(--gradient-page)" }}>
       <SiteNav />
-      <section className="mx-auto max-w-5xl px-6 pt-20 pb-12 text-center md:pt-28">
-        <p className="inline-flex rounded-full bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent">
+      <section className="mx-auto max-w-5xl px-6 pt-24 pb-14 text-center md:pt-32">
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-accent">
           Services
         </p>
-        <h1 className="mt-5 font-display text-5xl font-bold tracking-tight md:text-6xl">
-          Admin support, shaped around how you actually work.
+        <h1 className="mt-5 font-display text-5xl leading-[1.05] tracking-tight md:text-7xl">
+          Support shaped around <br /><span className="italic text-accent">how you actually work.</span>
         </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-          Mix and match. Start with one area, add more as you go. Every plan is monthly. Cancel or
+        <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          Start with one area, add more as you go. Every engagement is month-to-month. Cancel or
           pause anytime.
         </p>
       </section>
@@ -88,14 +88,14 @@ function ServicesPage() {
           {services.map((s) => (
             <div
               key={s.title}
-              className="glass rounded-2xl p-7 transition-all hover:-translate-y-0.5"
+              className="group rounded-2xl border border-border bg-card/60 p-8 backdrop-blur transition-all hover:-translate-y-1 hover:border-accent/40"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/15 text-accent">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent">
                 <s.icon className="h-5 w-5" />
               </div>
-              <h3 className="mt-5 font-display text-2xl font-semibold">{s.title}</h3>
-              <p className="mt-2 text-muted-foreground">{s.desc}</p>
-              <ul className="mt-5 grid gap-2 text-sm text-muted-foreground sm:grid-cols-2">
+              <h3 className="mt-6 font-display text-3xl tracking-tight">{s.title}</h3>
+              <p className="mt-2 text-base leading-relaxed text-muted-foreground">{s.desc}</p>
+              <ul className="mt-6 grid gap-2.5 text-sm text-muted-foreground sm:grid-cols-2">
                 {s.bullets.map((b) => (
                   <li key={b} className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
@@ -107,19 +107,19 @@ function ServicesPage() {
           ))}
         </div>
 
-        <div className="glass mt-16 rounded-3xl p-10 text-center md:p-14">
-          <h2 className="font-display text-3xl font-bold tracking-tight md:text-4xl">
+        <div className="mt-16 rounded-3xl border border-border bg-card/70 p-10 text-center backdrop-blur md:p-16">
+          <h2 className="font-display text-4xl leading-tight tracking-tight md:text-5xl">
             Not sure which fits?
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
-            Tell us what your week looks like. We'll suggest the right starting point. No upsell.
+          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
+            Tell us what your week looks like. We'll suggest the right starting point. No upsell, no obligation.
           </p>
           <Link
             to="/contact"
-            className="mt-6 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground hover:opacity-90"
+            className="group mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary/90"
           >
             Talk to us
-            <ArrowRight className="h-4 w-4" />
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
       </section>
