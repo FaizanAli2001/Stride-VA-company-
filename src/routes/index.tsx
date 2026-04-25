@@ -219,7 +219,7 @@ function Index() {
           <div>
             <Sparkles className="h-7 w-7 text-accent" />
             <h2 className="mt-4 font-display text-3xl font-bold tracking-tight md:text-4xl">
-              Be one of our first 10 clients.
+              Be our first client.
             </h2>
             <p className="mt-4 text-muted-foreground md:text-lg">
               We're keeping the founding roster small so every client gets real attention. No
