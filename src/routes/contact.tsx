@@ -10,8 +10,8 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
   head: () => ({
     meta: [
-      { title: "Contact. Stride Virtual Assistants" },
-      { name: "description", content: "Get in touch with Stride. Email info@stride.con and tell us what you need help with." },
+      { title: "Contact — Stride Executive Support" },
+      { name: "description", content: "Get in touch with Stride. Tell us what's on your plate and we'll respond within one business day." },
       { property: "og:title", content: "Contact. Stride" },
       { property: "og:description", content: "Email us. We reply within one business day." },
     ],
@@ -56,17 +56,18 @@ function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen text-foreground" style={{ background: "var(--gradient-page)" }}>
       <SiteNav />
-      <section className="mx-auto max-w-6xl px-6 pt-20 pb-12 md:pt-28">
-        <div className="inline-flex items-center rounded-full bg-accent/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-accent">
+      <section className="mx-auto max-w-6xl px-6 pt-24 pb-12 md:pt-32">
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-accent">
           Contact
-        </div>
-        <h1 className="mt-6 font-display text-5xl font-semibold tracking-tight md:text-6xl">
-          Let's get you in <span className="text-accent">full stride.</span>
+        </p>
+        <h1 className="mt-5 font-display text-5xl leading-[1.05] tracking-tight md:text-7xl">
+          Let's get you in <br /><span className="italic text-accent">full stride.</span>
         </h1>
-        <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-          Tell us a bit about your week and what's piling up. We'll respond within one business day with next steps.
+        <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground">
+          Tell us a bit about your week and what's piling up. We'll respond within one business
+          day with next steps.
         </p>
       </section>
 
@@ -75,7 +76,7 @@ function ContactPage() {
           {/* Form */}
           <form
             onSubmit={handleSubmit}
-            className="glass rounded-3xl border border-accent/20 p-8 md:p-10"
+            className="rounded-3xl border border-border bg-card/70 p-8 backdrop-blur md:p-10"
           >
             <div className="grid gap-5 sm:grid-cols-2">
               <div>
@@ -137,7 +138,7 @@ function ContactPage() {
             <button
               type="submit"
               disabled={submitting}
-              className="mt-6 inline-flex items-center justify-center rounded-full bg-accent px-7 py-3 text-sm font-semibold text-accent-foreground shadow-lg shadow-accent/30 transition hover:scale-[1.02] hover:bg-accent/90 disabled:cursor-not-allowed disabled:opacity-60"
+              className="mt-7 inline-flex items-center justify-center rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-60"
             >
               {submitting ? "Sending..." : submitted ? "Sent ✓ Send another" : "Send message"}
             </button>
@@ -145,41 +146,35 @@ function ContactPage() {
 
           {/* Info cards */}
           <div className="flex flex-col gap-6">
-            <div className="glass rounded-3xl border border-accent/20 p-7">
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-accent/20 text-accent">
+            <div className="rounded-3xl border border-border bg-card/70 p-7 backdrop-blur">
+              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-accent/10 text-accent">
                 <Calendar className="h-5 w-5" />
               </div>
-              <h3 className="mt-5 font-display text-xl font-semibold">Book an intro call</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Free 20 minutes. We'll figure out if we're a fit.
+              <h3 className="mt-5 font-display text-2xl tracking-tight">Book an intro call</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                A free 20-minute conversation to see if we're a fit. Use the form to request a slot.
               </p>
-              <a
-                href="mailto:info@stride.com"
-                className="mt-4 inline-block text-sm font-medium text-accent hover:underline"
-              >
-                info@stride.com
-              </a>
             </div>
 
-            <div className="glass rounded-3xl border border-accent/20 p-7">
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-accent/20 text-accent">
+            <div className="rounded-3xl border border-border bg-card/70 p-7 backdrop-blur">
+              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-accent/10 text-accent">
                 <Mail className="h-5 w-5" />
               </div>
-              <h3 className="mt-5 font-display text-xl font-semibold">Email us</h3>
+              <h3 className="mt-5 font-display text-2xl tracking-tight">Email us</h3>
               <a
                 href="mailto:info@stride.com"
                 className="mt-2 block text-sm font-medium text-foreground hover:text-accent"
               >
                 info@stride.com
               </a>
-              <p className="mt-1 text-sm text-muted-foreground">Reply within 1 business day</p>
+              <p className="mt-1 text-sm text-muted-foreground">Reply within one business day.</p>
             </div>
 
-            <div className="glass rounded-3xl border border-accent/20 p-7">
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-accent/20 text-accent">
+            <div className="rounded-3xl border border-border bg-card/70 p-7 backdrop-blur">
+              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-accent/10 text-accent">
                 <MessageCircle className="h-5 w-5" />
               </div>
-              <h3 className="mt-5 font-display text-xl font-semibold">Office hours</h3>
+              <h3 className="mt-5 font-display text-2xl tracking-tight">Office hours</h3>
               <p className="mt-2 text-sm text-muted-foreground">Monday to Friday</p>
               <p className="text-sm font-medium">9am to 6pm EST</p>
             </div>
