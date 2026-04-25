@@ -1,4 +1,5 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { Toaster } from "@/components/ui/sonner";
 
 import appCss from "../styles.css?url";
 
@@ -79,6 +80,7 @@ function RootComponent() {
         <div className="absolute -bottom-40 -right-40 h-[650px] w-[650px] rounded-full bg-accent/20 blur-[160px]" />
       </div>
       <Outlet />
+      <Toaster richColors position="top-center" />
     </div>
   );
 }
