@@ -34,7 +34,6 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const pills = ["Inbox", "Calendar", "CRM", "Operations"];
 const marquee = [
   "Inbox triage",
   "Calendar management",
@@ -45,7 +44,6 @@ const marquee = [
   "Lead enrichment",
   "Project operations",
 ];
-const trustLogos = ["NORTHWIND", "ACME & CO.", "MERIDIAN", "HARBOUR", "VERTEX", "LUMEN"];
 
 function Index() {
   return (
