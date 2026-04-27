@@ -13,6 +13,12 @@ import {
 } from "lucide-react";
 import { SiteNav } from "@/components/site-nav";
 import { SiteFooter } from "@/components/site-footer";
+import review1 from "@/assets/review-1.jpg";
+import review2 from "@/assets/review-2.jpg";
+import review3 from "@/assets/review-3.jpg";
+import review4 from "@/assets/review-4.jpg";
+import review5 from "@/assets/review-5.jpg";
+import review6 from "@/assets/review-6.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -253,77 +259,102 @@ function Index() {
           <div className="mt-6 flex items-center justify-center gap-2 text-sm text-muted-foreground">
             <div className="flex">
               {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="h-4 w-4 fill-accent text-accent" />
+                <Star
+                  key={i}
+                  className={
+                    i < 4
+                      ? "h-4 w-4 fill-accent text-accent"
+                      : "h-4 w-4 fill-accent/60 text-accent"
+                  }
+                />
               ))}
             </div>
-            <span className="font-semibold text-foreground">4.9/5</span>
-            <span>from 120+ US-based clients</span>
+            <span className="font-semibold text-foreground">4.7/5</span>
+            <span>from 140+ US clients · trusted by realtors nationwide</span>
           </div>
         </div>
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {[
             {
               quote:
-                "Stride took my inbox from 400 unread to zero in a week. I finally have time to actually run my company.",
+                "Honestly didn't think a VA could keep up with the Houston market, but they nailed it. Showings booked, lockboxes scheduled, sellers updated weekly. I closed 3 extra deals last quarter just from having my time back.",
               name: "Sarah Mitchell",
-              role: "Founder, Brightline Studio",
-              location: "Austin, TX",
-              initials: "SM",
+              role: "Realtor, Keller Williams",
+              location: "Houston, TX",
+              avatar: review1,
+              rating: 5,
             },
             {
               quote:
-                "Our CRM was a graveyard. Three weeks in, every lead is tagged, followed up, and warm. Worth every penny.",
+                "My Follow Up Boss was a graveyard. Three weeks in, every lead is tagged, drip-campaigned and warm. Took a sec to get our systems aligned but it's solid now.",
               name: "Marcus Reed",
-              role: "Managing Broker",
-              location: "Denver, CO",
-              initials: "MR",
+              role: "Managing Broker, Reed Realty Group",
+              location: "Houston, TX",
+              avatar: review2,
+              rating: 4,
             },
             {
               quote:
-                "Same-day responses, no hand-holding. They just get it. Feels like having a chief of staff at a fraction of the cost.",
+                "I run 40+ active listings in The Heights and Katy. Stride handles the MLS updates, buyer follow-ups and transaction coordination. Total game changer for a solo agent.",
+              name: "Priya Hernandez",
+              role: "Real Estate Agent, Compass",
+              location: "Houston, TX",
+              avatar: review3,
+              rating: 5,
+            },
+            {
+              quote:
+                "Started rocky, took about 2 weeks of back and forth on our CRM workflow. Once they got it though, my open house RSVPs and post-showing follow ups have been on point. Glad I stuck with it.",
+              name: "Andre Jackson",
+              role: "Realtor, eXp Realty",
+              location: "Sugar Land, TX",
+              avatar: review4,
+              rating: 3,
+            },
+            {
+              quote:
+                "Same person every week, knows my buyers cold, knows which lenders I prefer, even remembers my closing gift vendors. Feels like a real assistant, not a call center.",
               name: "Jennifer Caldwell",
-              role: "Partner, Caldwell Legal",
-              location: "Boston, MA",
-              initials: "JC",
+              role: "Broker Associate, Coldwell Banker",
+              location: "Austin, TX",
+              avatar: review5,
+              rating: 5,
             },
             {
               quote:
-                "Onboarded in 4 days. By day 10 they were running my calendar better than I ever did. Game changer.",
+                "Was skeptical about handing over client comms but Stride writes in my voice now. Buyers can't tell. The Houston team turnaround is fast - usually under an hour.",
               name: "David Nguyen",
-              role: "CEO, Northwind SaaS",
-              location: "Seattle, WA",
-              initials: "DN",
-            },
-            {
-              quote:
-                "Boutique really means boutique. I talk to the same person every week and she knows my business cold.",
-              name: "Ashley Romero",
-              role: "Real Estate Agent",
-              location: "Miami, FL",
-              initials: "AR",
-            },
-            {
-              quote:
-                "I was skeptical about offshoring admin work. Stride is US-quality, no awkward delays, no dropped balls.",
-              name: "Thomas Walker",
-              role: "Founder, Walker & Co.",
-              location: "Chicago, IL",
-              initials: "TW",
+              role: "Realtor, JPAR Real Estate",
+              location: "The Woodlands, TX",
+              avatar: review6,
+              rating: 4,
             },
           ].map((t) => (
             <div key={t.name} className="glass flex flex-col rounded-2xl p-6">
               <div className="flex">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-accent text-accent" />
+                  <Star
+                    key={i}
+                    className={
+                      i < t.rating
+                        ? "h-4 w-4 fill-accent text-accent"
+                        : "h-4 w-4 text-muted-foreground/40"
+                    }
+                  />
                 ))}
               </div>
               <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">
                 "{t.quote}"
               </p>
               <div className="mt-6 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent text-sm font-bold text-accent-foreground">
-                  {t.initials}
-                </div>
+                <img
+                  src={t.avatar}
+                  alt={t.name}
+                  loading="lazy"
+                  width={40}
+                  height={40}
+                  className="h-10 w-10 rounded-full object-cover"
+                />
                 <div>
                   <p className="font-display text-sm font-semibold">{t.name}</p>
                   <p className="text-xs text-muted-foreground">
