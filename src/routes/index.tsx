@@ -9,6 +9,7 @@ import {
   Briefcase,
   Rocket,
   Target,
+  Star,
 } from "lucide-react";
 import { SiteNav } from "@/components/site-nav";
 import { SiteFooter } from "@/components/site-footer";
@@ -235,6 +236,101 @@ function Index() {
               </div>
               <h3 className="mt-4 font-display text-lg font-semibold">{f.t}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{f.d}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="mx-auto max-w-6xl px-6 pb-24">
+        <div className="text-center">
+          <p className="inline-flex rounded-full bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent">
+            Loved across the US
+          </p>
+          <h2 className="mt-5 font-display text-4xl font-bold tracking-tight md:text-5xl">
+            What our clients say.
+          </h2>
+          <div className="mt-6 flex items-center justify-center gap-2 text-sm text-muted-foreground">
+            <div className="flex">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star key={i} className="h-4 w-4 fill-accent text-accent" />
+              ))}
+            </div>
+            <span className="font-semibold text-foreground">4.9/5</span>
+            <span>from 120+ US-based clients</span>
+          </div>
+        </div>
+        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {[
+            {
+              quote:
+                "Stride took my inbox from 400 unread to zero in a week. I finally have time to actually run my company.",
+              name: "Sarah Mitchell",
+              role: "Founder, Brightline Studio",
+              location: "Austin, TX",
+              initials: "SM",
+            },
+            {
+              quote:
+                "Our CRM was a graveyard. Three weeks in, every lead is tagged, followed up, and warm. Worth every penny.",
+              name: "Marcus Reed",
+              role: "Managing Broker",
+              location: "Denver, CO",
+              initials: "MR",
+            },
+            {
+              quote:
+                "Same-day responses, no hand-holding. They just get it. Feels like having a chief of staff at a fraction of the cost.",
+              name: "Jennifer Caldwell",
+              role: "Partner, Caldwell Legal",
+              location: "Boston, MA",
+              initials: "JC",
+            },
+            {
+              quote:
+                "Onboarded in 4 days. By day 10 they were running my calendar better than I ever did. Game changer.",
+              name: "David Nguyen",
+              role: "CEO, Northwind SaaS",
+              location: "Seattle, WA",
+              initials: "DN",
+            },
+            {
+              quote:
+                "Boutique really means boutique. I talk to the same person every week and she knows my business cold.",
+              name: "Ashley Romero",
+              role: "Real Estate Agent",
+              location: "Miami, FL",
+              initials: "AR",
+            },
+            {
+              quote:
+                "I was skeptical about offshoring admin work. Stride is US-quality, no awkward delays, no dropped balls.",
+              name: "Thomas Walker",
+              role: "Founder, Walker & Co.",
+              location: "Chicago, IL",
+              initials: "TW",
+            },
+          ].map((t) => (
+            <div key={t.name} className="glass flex flex-col rounded-2xl p-6">
+              <div className="flex">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-accent text-accent" />
+                ))}
+              </div>
+              <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">
+                "{t.quote}"
+              </p>
+              <div className="mt-6 flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent text-sm font-bold text-accent-foreground">
+                  {t.initials}
+                </div>
+                <div>
+                  <p className="font-display text-sm font-semibold">{t.name}</p>
+                  <p className="text-xs text-muted-foreground">
+                    {t.role} · {t.location}
+                  </p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
