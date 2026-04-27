@@ -268,10 +268,10 @@ function Index() {
               ))}
             </div>
             <span className="font-semibold text-foreground">4.7/5</span>
-            <span>from 140+ US clients · trusted by realtors nationwide</span>
+            <span>from Houston-area realtors and brokers</span>
           </div>
         </div>
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-5 md:grid-cols-2">
           {[
             {
               quote:
@@ -308,24 +308,6 @@ function Index() {
               location: "Sugar Land, TX",
               avatar: review4,
               rating: 3,
-            },
-            {
-              quote:
-                "Same person every week, knows my buyers cold, knows which lenders I prefer, even remembers my closing gift vendors. Feels like a real assistant, not a call center.",
-              name: "Jennifer Caldwell",
-              role: "Broker Associate, Coldwell Banker",
-              location: "Austin, TX",
-              avatar: review5,
-              rating: 5,
-            },
-            {
-              quote:
-                "Was skeptical about handing over client comms but Stride writes in my voice now. Buyers can't tell. The Houston team turnaround is fast - usually under an hour.",
-              name: "David Nguyen",
-              role: "Realtor, JPAR Real Estate",
-              location: "The Woodlands, TX",
-              avatar: review6,
-              rating: 4,
             },
           ].map((t) => (
             <div key={t.name} className="glass flex flex-col rounded-2xl p-6">
