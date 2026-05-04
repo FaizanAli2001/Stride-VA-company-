@@ -35,7 +35,7 @@ const team = [
     ],
   },
   {
-    name: "Dr. Malik Wasif Khalid",
+    name: "Faizan Ali",
     role: "CTO",
     img: faizanImg,
     points: [
@@ -55,7 +55,7 @@ const team = [
     ],
   },
   {
-    name: "Faizan Ali",
+    name: "Dr. Malik Wasif Khalid",
     role: "COO",
     img: malikImg,
     points: [
