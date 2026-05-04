@@ -35,9 +35,9 @@ const team = [
     ],
   },
   {
-    name: "Dr. Malik Wasif Khalid",
+    name: "Faizan Ali",
     role: "CTO",
-    img: malikImg,
+    img: faizanImg,
     points: [
       "Shapes the technology behind smooth client delivery",
       "Improves systems, tools, and internal workflows",
@@ -55,9 +55,9 @@ const team = [
     ],
   },
   {
-    name: "Faizan Ali",
+    name: "Dr. Malik Wasif Khalid",
     role: "COO",
-    img: faizanImg,
+    img: malikImg,
     points: [
       "Runs day to day operations across the business",
       "Builds efficient processes for client support",
