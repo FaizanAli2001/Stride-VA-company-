@@ -4,7 +4,6 @@
 
 Stride is a multi-page marketing site for a boutique virtual assistant firm helping busy professionals move faster: emails, calendars, CRM and everything in between. It includes a working contact form whose submissions are persisted to a backend database.
 
-Built with [Lovable](https://lovable.dev) and editable both in Lovable and locally in your IDE — changes sync both ways via GitHub.
 
 ---
 
